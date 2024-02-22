@@ -20,7 +20,7 @@
 #define RMD         2
 #define SYM         3
 #define NUM         4
-#define Mouse       5
+#define ARW         5
 #define Media       6
 #define Fun         7
 #define Button      8
@@ -66,10 +66,10 @@
         BASE {
             label = "BASE";
             bindings = <
-                        &kp Q    &kp W      &kp E    &kp R          &kp T     &kp Y        &kp U        &kp I         &kp O        &kp P
-                        &kp A    &kp S      &kp D    &kp F          &kp G     &kp H        &kp J        &kp K         &kp L        &kp SEMICOLON
-              &kp Z     &kp Z    &kp X      &kp C    &kp V          &kp B     &kp N        &kp M        &kp COMMA     &kp DOT      &kp SLASH      &kp SLASH
-                                            &to LMD  &lt SYM SPACE  &kp ESC   &kp BSPC     &lt NUM ENTER    &lt RMD TAB
+                        &kp Q    &kp W      &kp E    &kp R          &kp T     &kp Y         &kp U          &kp I         &kp O        &kp P
+                        &kp A    &kp S      &kp D    &kp F          &kp G     &kp H         &kp J          &kp K         &kp L        &kp SEMICOLON
+              &kp Z     &kp Z    &kp X      &kp C    &kp V          &kp B     &kp N         &kp M          &kp COMMA     &kp DOT      &kp SLASH      &kp SLASH
+                                            &to LMD  &lt SYM SPACE  &kp ESC   &lt ARW BSPC  &lt NUM ENTER  &lt RMD TAB
             >;
         };
 
@@ -113,13 +113,13 @@
             >;
         };
 
-        Fun {
-            label = "Fun";
+        ARW {
+            label = "ARW";
             bindings = <
-        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans   &kp F1
-        &trans  &trans  &trans  &trans   &to 5  &trans  &trans  &trans  &trans  &kp F10
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp F20  &trans
-                        &trans  &trans  &trans  &trans  &trans  &trans
+                      &trans  &trans  &trans  &trans  &trans  &trans    &kp PG_DN  &kp PG_UP  &kp INS    &trans
+                      &trans  &trans  &trans  &trans  &trans  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &trans
+              &trans  &trans  &trans  &trans  &trans  &trans  &trans    &kp END    &kp HOME   &kp PSCRN  &trans  &trans
+                                      &trans  &trans  &trans  &trans    &trans     &trans
             >;
         };
 
