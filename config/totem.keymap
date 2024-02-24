@@ -109,13 +109,13 @@
             >;
         };
 
-        ARW {
-            label = "ARW";
+        NAV {
+            label = "NAV";
             bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans    &kp PG_DN  &kp PG_UP  &kp INS    &trans
-        &trans  &trans  &trans  &trans  &trans    &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans    &kp END    &kp HOME   &kp PSCRN  &trans  &trans
-                        &trans  &trans  &trans    &trans    &trans     &trans
+        &trans  &trans  &trans        &trans          &trans              &trans    &kp PAGE_DOWN  &kp PAGE_UP  &kp INS    &trans
+        &trans  &trans  &trans        &trans          &trans              &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT  &trans
+&trans  &trans  &trans  &trans        &trans          &trans              &trans    &kp END        &kp HOME     &kp PSCRN  &trans  &trans
+                        &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_CONTROL    &trans    &trans         &trans
             >;
         };
 
