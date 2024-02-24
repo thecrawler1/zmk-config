@@ -52,7 +52,14 @@
         };
     };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        combo_meta_shift {
+            bindings = <&kp LG(LEFT_SHIFT)>;
+            key-positions = <33 35 35>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
