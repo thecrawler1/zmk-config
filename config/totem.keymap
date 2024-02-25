@@ -99,10 +99,10 @@
         SYM {
             label = "SYM";
             bindings = <
-        &kp EXCL   &kp AT     &kp HASH   &kp DOLLAR     &kp PERCENT    &kp CARET         &kp AMPERSAND   &kp STAR      &kp UNDERSCORE  &trans
-        &kp PIPE   &kp LBKT   &kp LBRC   &kp LPAR       &kp SLASH      &kp BACKSLASH     &kp RPAR        &kp RBRC      &kp RBKT        &trans
-&trans  &kp GRAVE  &kp TILDE  &kp COLON  &kp SEMICOLON  &kp DQT        &kp SQT           &kp MINUS       &kp PLUS      &kp EQUAL       &trans  &trans
-                              &trans     &trans         &trans         &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp LEFT_ALT
+        &kp EXCL   &kp AT     &kp HASH   &kp DOLLAR     &kp PERCENT      &kp CARET         &kp AMPERSAND   &kp STAR      &kp UNDERSCORE  &trans
+        &kp PIPE   &kp LBKT   &kp LBRC   &kp LPAR       &kp BACKSLASH    &kp SLASH         &kp RPAR        &kp RBRC      &kp RBKT        &trans
+&trans  &kp GRAVE  &kp TILDE  &kp COLON  &kp SEMICOLON  &kp DQT          &kp SQT           &kp MINUS       &kp PLUS      &kp EQUAL       &trans  &trans
+                              &trans     &trans         &trans           &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp LEFT_ALT
             >;
         };
 
