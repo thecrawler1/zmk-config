@@ -31,7 +31,7 @@
 
         combo_meta_shift {
             bindings = <&kp LG(LEFT_SHIFT)>;
-            key-positions = <33 35 35>;
+            key-positions = <33 36>;
             require-prior-idle-ms = <0>;
             layers = <0>;
         };
