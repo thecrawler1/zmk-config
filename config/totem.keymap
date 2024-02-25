@@ -26,16 +26,7 @@
 #define Gameplus    10
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        combo_meta_shift {
-            bindings = <&kp LG(LEFT_SHIFT)>;
-            key-positions = <33 36>;
-            require-prior-idle-ms = <0>;
-            layers = <0>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     behaviors {
         lhr: lhr {
