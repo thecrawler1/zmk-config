@@ -79,16 +79,6 @@
             >;
         };
 
-        NUM {
-            label = "NUM";
-            bindings = <
-        &kp F1   &kp F2   &kp F3        &kp F4     &kp F5       &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
-        &kp N1   &kp N2   &kp N3        &kp N4     &kp N5       &kp N6  &kp N7  &kp N8  &kp N9  &trans
-&trans  &kp F11  &kp F12  &trans        &kp N0     &trans       &trans  &trans  &trans  &trans  &trans   &trans
-                          &kp LEFT_ALT  &kp LSHFT  &kp LCTRL    &trans  &trans  &trans
-            >;
-        };
-
         NAV {
             label = "NAV";
             bindings = <
@@ -96,6 +86,16 @@
         &trans  &trans  &trans        &trans          &trans              &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT  &trans
 &trans  &trans  &trans  &trans        &trans          &trans              &trans    &kp END        &kp HOME     &kp PSCRN  &trans  &trans
                         &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_CONTROL    &trans    &trans         &trans
+            >;
+        };
+
+        NUM {
+            label = "NUM";
+            bindings = <
+        &kp F1   &kp F2   &kp F3        &kp F4     &kp F5       &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
+        &kp N1   &kp N2   &kp N3        &kp N4     &kp N5       &kp N6  &kp N7  &kp N8  &kp N9  &trans
+&trans  &kp F11  &kp F12  &trans        &kp N0     &trans       &trans  &trans  &trans  &trans  &trans   &trans
+                          &kp LEFT_ALT  &kp LSHFT  &kp LCTRL    &trans  &trans  &trans
             >;
         };
 
