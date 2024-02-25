@@ -71,30 +71,10 @@
         BASE {
             label = "BASE";
             bindings = <
-       &kp Q  &kp W            &kp E              &kp R                &kp T        &kp Y      &kp U                 &kp I               &kp O             &kp P
-       &kp A  &lhr LEFT_ALT S  &lhr LEFT_SHIFT D  &lhr LEFT_CONTROL F  &kp G        &kp H      &rhr RIGHT_CONTROL J  &rhr RIGHT_SHIFT K  &rhr RIGHT_ALT L  &none
-&none  &kp Z  &kp X            &kp C              &kp V                &kp B        &kp N      &kp M                 &kp COMMA           &kp DOT           &none  &none
-                               &lt 3 DELETE       &mt LMETA SPACE      &lt 1 ESC    &lt 2 TAB  &lt 5 ENTER           &lt 4 BACKSPACE
-            >;
-        };
-
-        LMD {
-            label = "LMD";
-            bindings = <
-        &trans  &trans    &trans      &trans     &trans    &trans  &trans  &trans  &trans  &trans
-        &trans  &kp LALT  &kp LSHIFT  &kp LCTRL  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans    &trans      &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                          &trans      &trans     &trans    &trans  &trans  &trans
-            >;
-        };
-
-        RMD {
-            label = "RMD";
-            bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans      &trans    &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &kp RCTRL  &kp RSHIFT  &kp RALT  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans      &trans    &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans     &trans
+       &kp Q  &kp W            &kp E              &kp R                &kp T      &kp Y    &kp U                 &kp I               &kp O             &kp P
+       &kp A  &lhr LEFT_ALT S  &lhr LEFT_SHIFT D  &lhr LEFT_CONTROL F  &kp G      &kp H    &rhr RIGHT_CONTROL J  &rhr RIGHT_SHIFT K  &rhr RIGHT_ALT L  &none
+&none  &kp Z  &kp X            &kp C              &kp V                &kp B      &kp N    &kp M                 &kp COMMA           &kp DOT           &none  &none
+                               &lt 1 DELETE       &mt LMETA SPACE      &kp ESC    &kp TAB  &lt 3 ENTER           &lt 2 BACKSPACE
             >;
         };
 
