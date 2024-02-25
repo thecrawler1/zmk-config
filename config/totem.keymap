@@ -37,6 +37,32 @@
         };
     };
 
+    behaviors {
+        lhr: lhr {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LHR";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            require-prior-idle-ms = <50>;
+            flavor = "tap-preferred";
+            hold-trigger-key-positions = <5 15 26 6 16 27 7 17 28 8 18 29 9 19 30 31>;
+        };
+
+        rhr: rhr {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RHR";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            require-prior-idle-ms = <50>;
+            flavor = "tap-preferred";
+            hold-trigger-key-positions = <20 0 21 10 11 1 22 2 12 23 3 13 24 4 14 25>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
