@@ -99,12 +99,12 @@
             >;
         };
 
-        layer_4 {
+        MOUSE {
             bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+        &trans  &trans     &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans
+        &trans  &mkp MCLK  &mkp RCLK  &mkp LCLK  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                           &trans     &trans     &trans    &trans  &trans  &trans
             >;
         };
     };
