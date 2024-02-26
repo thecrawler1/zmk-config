@@ -28,6 +28,8 @@
 
 &mt { flavor = "tap-preferred"; };
 
+&lt { require-prior-idle-ms = <200>; };
+
 / {
     combos { compatible = "zmk,combos"; };
 
