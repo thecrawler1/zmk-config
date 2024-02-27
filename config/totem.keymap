@@ -26,10 +26,6 @@
 #define Game        9
 #define Gameplus    10
 
-&mt { flavor = "tap-preferred"; };
-
-&lt { require-prior-idle-ms = <200>; };
-
 / {
     combos { compatible = "zmk,combos"; };
 
