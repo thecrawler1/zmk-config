@@ -75,10 +75,10 @@
         LAYER_1 {
             label = "LAYER_1";
             bindings = <
-       &kp EXCL  &kp AT             &kp HASH         &kp DOLLAR             &kp PERCENT      &kp CARET  &kp AMPERSAND   &kp STAR   &none     &none
-       &none     &kp LEFT_BRACKET   &kp LEFT_BRACE   &kp LEFT_PARENTHESIS   &kp BACKSLASH    &kp SLASH  &kp RPAR        &kp RBRC   &kp RBKT  &none
-&none  &none     &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp RIGHT_PARENTHESIS  &none            &none      &kp MINUS       &kp EQUAL  &none     &none  &kp BACKSPACE
-                                    &to 0            &none                  &none            &none      &sk LEFT_SHIFT  &to 2
+       &none  &none              &kp HASH         &none                  &kp PERCENT      &none      &kp AMPERSAND    &kp STAR   &none       &none
+       &none  &kp LEFT_BRACKET   &kp LEFT_BRACE   &kp LEFT_PARENTHESIS   &kp BACKSLASH    &kp CARET  &kp EXCLAMATION  &kp AT     &kp DOLLAR  &none
+&none  &none  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp RIGHT_PARENTHESIS  &none            &none      &kp MINUS        &kp EQUAL  &none       &none  &kp BACKSPACE
+                                 &to 0            &none                  &none            &none      &sk LEFT_SHIFT   &to 2
             >;
         };
 
