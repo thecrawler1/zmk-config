@@ -75,30 +75,30 @@
         LAYER_1 {
             label = "LAYER_1";
             bindings = <
-       &kp EXCL       &kp AT    &kp HASH   &kp DOLLAR        &kp PERCENT      &kp CARET  &kp AMPERSAND  &kp STAR   &none     &none
-       &kp SEMICOLON  &kp LBKT  &kp LBRC   &kp LPAR          &kp BACKSLASH    &kp SLASH  &kp RPAR       &kp RBRC   &kp RBKT  &none
-&none  &none          &none     &kp GRAVE  &kp SINGLE_QUOTE  &none            &none      &kp MINUS      &kp EQUAL  &none     &none  &none
-                                &to 0      &none             &none            &none      &none          &to 2
+       &kp EXCL       &kp AT    &kp HASH   &kp DOLLAR        &kp PERCENT      &kp CARET  &kp AMPERSAND   &kp STAR   &none     &none
+       &kp SEMICOLON  &kp LBKT  &kp LBRC   &kp LPAR          &kp BACKSLASH    &kp SLASH  &kp RPAR        &kp RBRC   &kp RBKT  &none
+&none  &none          &none     &kp GRAVE  &kp SINGLE_QUOTE  &none            &none      &kp MINUS       &kp EQUAL  &none     &none  &none
+                                &to 0      &none             &none            &none      &sk LEFT_SHIFT  &to 2
             >;
         };
 
         LAYER_2 {
             label = "LAYER_2";
             bindings = <
-       &kp F1   &kp F2   &kp F3  &kp F4  &kp F5    &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
-       &kp N1   &kp N2   &kp N3  &kp N4  &kp N5    &kp N6  &kp N7  &kp N8  &kp N9  &none
-&none  &kp F11  &kp F12  &none   &kp N0  &none     &none   &none   &none   &none   &none    &none
-                         &to 0   &none   &none     &none   &none   &none
+       &kp F1   &kp F2   &kp F3  &kp F4  &kp F5    &kp F6  &kp F7          &kp F8  &kp F9  &kp F10
+       &kp N1   &kp N2   &kp N3  &kp N4  &kp N5    &kp N6  &kp N7          &kp N8  &kp N9  &none
+&none  &kp F11  &kp F12  &none   &kp N0  &none     &none   &none           &none   &none   &none    &none
+                         &to 0   &none   &none     &none   &sk LEFT_SHIFT  &none
             >;
         };
 
         LAYER_3 {
             label = "LAYER_3";
             bindings = <
-       &none  &none  &none  &none  &none    &none     &kp PAGE_DOWN  &kp PAGE_UP  &kp INS    &none
-       &none  &none  &none  &none  &none    &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT  &none
-&none  &none  &none  &none  &none  &none    &none     &kp END        &kp HOME     &kp PSCRN  &none  &none
-                     &to 0  &none  &none    &none     &none          &none
+       &none  &none  &none  &none  &none    &none     &kp PAGE_DOWN   &kp PAGE_UP  &kp INS    &none
+       &none  &none  &none  &none  &none    &kp LEFT  &kp DOWN        &kp UP       &kp RIGHT  &none
+&none  &none  &none  &none  &none  &none    &none     &kp END         &kp HOME     &kp PSCRN  &none  &none
+                     &to 0  &none  &none    &none     &sk LEFT_SHIFT  &none
             >;
         };
     };
