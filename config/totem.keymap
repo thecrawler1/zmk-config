@@ -35,31 +35,37 @@
         combo_left_ctrl {
             bindings = <&kp LEFT_CONTROL>;
             key-positions = <12 13>;
+            layers = <0 1 2 3 4 5>;
         };
 
         combo_right_ctrl {
             bindings = <&kp RIGHT_CONTROL>;
             key-positions = <16 17>;
+            layers = <0 1 2 3 4 5>;
         };
 
         combo_left_alt {
             bindings = <&kp LEFT_ALT>;
             key-positions = <11 12>;
+            layers = <0 1 2 3 4 5>;
         };
 
         combo_right_alt {
             bindings = <&kp RIGHT_ALT>;
             key-positions = <17 18>;
+            layers = <0 1 2 3 4 5>;
         };
 
         combo_left_ctrl_alt {
             bindings = <&kp LC(LEFT_ALT)>;
             key-positions = <11 12 13>;
+            layers = <0 1 2 3 4 5>;
         };
 
         combo_right_ctrl_alt {
             bindings = <&kp RC(RIGHT_ALT)>;
             key-positions = <16 17 18>;
+            layers = <0 1 2 3 4 5>;
         };
     };
 
