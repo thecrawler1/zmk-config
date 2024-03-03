@@ -67,11 +67,67 @@
             label = "A_ACUTE";
         };
 
+        e_acute: e_acute {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp K_CONTEXT_MENU &kp SINGLE_QUOTE &kp E>;
+            label = "E_ACUTE";
+        };
+
+        i_acute: i_acute {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp K_CONTEXT_MENU &kp SINGLE_QUOTE &kp I>;
+            label = "I_ACUTE";
+        };
+
+        o_acute: o_acute {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp K_CONTEXT_MENU &kp SINGLE_QUOTE &kp O>;
+            label = "O_ACUTE";
+        };
+
+        u_acute: u_acute {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp K_CONTEXT_MENU &kp SINGLE_QUOTE &kp U>;
+            label = "U_ACUTE";
+        };
+
         shift_a_acute: shift_a_acute {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp K_CONTEXT_MENU &kp SINGLE_QUOTE &kp LS(A)>;
             label = "SHIFT_A_ACUTE";
+        };
+
+        shift_e_acute: shift_e_acute {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp K_CONTEXT_MENU &kp SINGLE_QUOTE &kp LS(E)>;
+            label = "SHIFT_E_ACUTE";
+        };
+
+        shift_i_acute: shift_i_acute {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp K_CONTEXT_MENU &kp SINGLE_QUOTE &kp LS(I)>;
+            label = "SHIFT_I_ACUTE";
+        };
+
+        shift_o_acute: shift_o_acute {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp K_CONTEXT_MENU &kp SINGLE_QUOTE &kp LS(O)>;
+            label = "SHIFT_O_ACUTE";
+        };
+
+        shift_u_acute: shift_u_acute {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp K_CONTEXT_MENU &kp SINGLE_QUOTE &kp LS(U)>;
+            label = "SHIFT_U_ACUTE";
         };
     };
 
