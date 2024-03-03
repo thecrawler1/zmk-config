@@ -245,16 +245,32 @@
         };
     };
 
+    behaviors {
+        super_2: super_2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SUPER_2";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_META>, <&sl 2>;
+        };
+
+        shift_1: shift_1 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SHIFT_1";
+            #binding-cells = <0>;
+            bindings = <&sk LEFT_SHIFT>, <&sl 1>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         LAYER_0 {
             label = "LAYER_0";
             bindings = <
-              &kp Q  &kp W  &kp E  &kp R      &kp T            &kp Y           &kp U      &kp I      &kp O    &kp P
-              &kp A  &kp S  &kp D  &kp F      &kp G            &kp H           &kp J      &kp K      &kp L    &kp SEMI
-&kp CAPSLOCK  &kp Z  &kp X  &kp C  &kp V      &kp B            &kp N           &kp M      &kp COMMA  &kp DOT  &kp SLASH  &kp BACKSPACE
-                            &sl 4  &kp SPACE  &kp LEFT_META    &sk LEFT_SHIFT  &kp ENTER  &to 1
+              &kp Q  &kp W  &kp E  &kp R      &kp T       &kp Y     &kp U      &kp I      &kp O    &kp P
+              &kp A  &kp S  &kp D  &kp F      &kp G       &kp H     &kp J      &kp K      &kp L    &kp SEMI
+&kp CAPSLOCK  &kp Z  &kp X  &kp C  &kp V      &kp B       &kp N     &kp M      &kp COMMA  &kp DOT  &kp SLASH  &kp BACKSPACE
+                            &sl 4  &kp SPACE  &super_2    &shift_1  &kp ENTER  &to 1
             >;
         };
 
@@ -290,10 +306,10 @@
 
         LAYER_4 {
             bindings = <
-        &a_acute       &none     &e_acute       &none   &none    &none   &u_acute  &i_acute  &o_acute       &none
-        &a_circumflex  &a_tilde  &e_circumflex  &none   &none    &none   &none     &none     &o_circumflex  &none
-&trans  &a_grave       &none     &c_cedilla     &none   &none    &none   &none     &none     &none          &none  &trans
-                                 &to 0          &trans  &none    &trans  &trans    &sl 5
+        &a_acute       &trans    &e_acute       &trans  &trans    &trans  &u_acute  &i_acute  &o_acute       &trans
+        &a_circumflex  &a_tilde  &e_circumflex  &trans  &trans    &trans  &trans    &trans    &o_circumflex  &trans
+&trans  &a_grave       &trans    &c_cedilla     &trans  &trans    &trans  &trans    &trans    &trans         &trans  &trans
+                                 &to 0          &trans  &trans    &trans  &trans    &sl 5
             >;
 
             label = "LAYER_4";
@@ -301,10 +317,10 @@
 
         LAYER_5 {
             bindings = <
-        &shift_a_acute       &none           &shift_e_acute       &none   &none    &none   &shift_u_acute  &shift_i_acute  &shift_o_acute       &none
-        &shift_a_circumflex  &shift_a_tilde  &shift_e_circumflex  &none   &none    &none   &none           &none           &shift_o_circumflex  &none
-&trans  &shift_a_grave       &none           &shift_c_cedilla     &none   &none    &none   &none           &none           &none                &none  &trans
-                                             &to 0                &trans  &none    &trans  &trans          &none
+        &shift_a_acute       &trans          &shift_e_acute       &trans  &trans    &trans  &shift_u_acute  &shift_i_acute  &shift_o_acute       &trans
+        &shift_a_circumflex  &shift_a_tilde  &shift_e_circumflex  &trans  &trans    &trans  &trans          &trans          &shift_o_circumflex  &trans
+&trans  &shift_a_grave       &trans          &shift_c_cedilla     &trans  &trans    &trans  &trans          &trans          &trans               &trans  &trans
+                                             &to 0                &trans  &trans    &trans  &trans          &trans
             >;
 
             label = "LAYER_5";
