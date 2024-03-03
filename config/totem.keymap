@@ -246,10 +246,10 @@
 
         layer_4 {
             bindings = <
-        &none     &none  &e_acute  &none  &none     &none   &u_acute  &i_acute  &o_acute  &none
-        &a_acute  &none  &none     &none  &none     &none   &none     &none     &none     &none
-&trans  &none     &none  &none     &none  &none     &none   &none     &none     &none     &none  &trans
-                         &to 0     &none  &trans    &trans  &trans    &none
+        &a_acute       &none     &e_acute       &none  &none     &none   &u_acute  &i_acute  &o_acute       &none
+        &a_circumflex  &a_tilde  &e_circumflex  &none  &none     &none   &none     &none     &o_circumflex  &none
+&trans  &a_grave       &none     &none          &none  &none     &none   &none     &none     &none          &none  &trans
+                                 &to 0          &none  &trans    &trans  &trans    &none
             >;
         };
     };
