@@ -185,6 +185,20 @@
             bindings = <&kp K_CONTEXT_MENU &kp TILDE &kp LS(A)>;
             label = "SHIFT_A_TILDE";
         };
+
+        a_grave: a_crasis {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp K_CONTEXT_MENU &kp GRAVE &kp A>;
+            label = "A_CRASIS";
+        };
+
+        shift_a_grave: shift_a_grave {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp K_CONTEXT_MENU &kp GRAVE &kp LS(A)>;
+            label = "SHIFT_A_GRAVE";
+        };
     };
 
     keymap {
