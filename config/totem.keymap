@@ -231,10 +231,10 @@
         LAYER_1 {
             label = "LAYER_1";
             bindings = <
-        &kp GRAVE         &kp EXCLAMATION    &kp HASH         &kp PERCENT            &none            &none      &kp STAR   &kp AMPERSAND  &none       &none
-        &kp SINGLE_QUOTE  &kp LEFT_BRACKET   &kp LEFT_BRACE   &kp LEFT_PARENTHESIS   &kp BACKSLASH    &kp CARET  &kp MINUS  &kp EQUAL      &kp DOLLAR  &kp AT
-&trans  &none             &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp RIGHT_PARENTHESIS  &none            &none      &none      &none          &none       &none   &trans
-                                             &to 0            &to 2                  &trans           &trans     &trans     &to 3
+        &kp GRAVE         &kp EXCLAMATION    &kp HASH         &kp PERCENT            &none     &none      &kp STAR        &kp AMPERSAND  &kp AT      &none
+        &kp SINGLE_QUOTE  &kp LEFT_BRACKET   &kp LEFT_BRACE   &kp LEFT_PARENTHESIS   &none     &kp CARET  &kp MINUS       &kp EQUAL      &kp DOLLAR  &kp DOUBLE_QUOTES
+&trans  &kp TILDE         &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp RIGHT_PARENTHESIS  &none     &none      &kp UNDERSCORE  &kp PLUS       &kp PIPE    &kp BACKSLASH      &trans
+                                             &to 0            &to 2                  &trans    &trans     &trans          &to 3
             >;
         };
 
