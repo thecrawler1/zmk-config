@@ -59,6 +59,18 @@
         };
     };
 
+    macros {
+        a_acute: a_acute {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp K_CONTEXT_MENU &kp SINGLE_QUOTE &kp A>;
+
+            label = "A_ACUTE";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
