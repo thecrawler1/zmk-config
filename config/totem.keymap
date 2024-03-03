@@ -75,30 +75,30 @@
         LAYER_1 {
             label = "LAYER_1";
             bindings = <
-       &none  &none              &kp HASH         &none                  &kp PERCENT      &none      &kp AMPERSAND    &kp STAR   &none       &none
-       &none  &kp LEFT_BRACKET   &kp LEFT_BRACE   &kp LEFT_PARENTHESIS   &kp BACKSLASH    &kp CARET  &kp EXCLAMATION  &kp AT     &kp DOLLAR  &none
-&none  &none  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp RIGHT_PARENTHESIS  &none            &none      &kp MINUS        &kp EQUAL  &none       &none  &kp BACKSPACE
-                                 &to 0            &to 2                  &kp SPACE        &kp ENTER  &sk LEFT_SHIFT   &to 3
+              &none             &kp EXCLAMATION    &kp HASH         &kp PERCENT            &none            &none      &kp STAR        &kp AMPERSAND  &none       &none
+              &kp SINGLE_QUOTE  &kp LEFT_BRACKET   &kp LEFT_BRACE   &kp LEFT_PARENTHESIS   &kp BACKSLASH    &kp CARET  &kp MINUS       &kp EQUAL      &kp DOLLAR  &kp AT
+&kp CAPSLOCK  &none             &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp RIGHT_PARENTHESIS  &none            &none      &none           &none          &none       &none   &kp BACKSPACE
+                                                   &to 0            &to 2                  &kp SPACE        &kp ENTER  &sk LEFT_SHIFT  &to 3
             >;
         };
 
         LAYER_2 {
             label = "LAYER_2";
             bindings = <
-       &kp F1   &kp F2   &kp F3  &kp F4  &kp F5       &kp F6     &kp F7          &kp F8  &kp F9  &kp F10
-       &kp N1   &kp N2   &kp N3  &kp N4  &kp N5       &kp N6     &kp N7          &kp N8  &kp N9  &none
-&none  &kp F11  &kp F12  &none   &kp N0  &none        &none      &none           &none   &none   &none    &kp BACKSPACE
-                         &to 0   &to 1   &kp SPACE    &kp ENTER  &sk LEFT_SHIFT  &to 3
+              &kp F1   &kp F2   &kp F3  &kp F4  &kp F5       &kp F6     &kp F7          &kp F8  &kp F9  &kp F10
+              &kp N1   &kp N2   &kp N3  &kp N4  &kp N5       &kp N6     &kp N7          &kp N8  &kp N9  &kp N0
+&kp CAPSLOCK  &kp F11  &kp F12  &none   &none   &none        &none      &none           &none   &none   &none    &kp BACKSPACE
+                                &to 0   &to 1   &kp SPACE    &kp ENTER  &sk LEFT_SHIFT  &to 3
             >;
         };
 
         LAYER_3 {
             label = "LAYER_3";
             bindings = <
-       &none  &none  &none  &none  &none        &none      &kp PAGE_DOWN   &kp PAGE_UP  &kp INS    &none
-       &none  &none  &none  &none  &none        &kp LEFT   &kp DOWN        &kp UP       &kp RIGHT  &none
-&none  &none  &none  &none  &none  &none        &none      &kp END         &kp HOME     &kp PSCRN  &none  &kp BACKSPACE
-                     &to 0  &to 2  &kp SPACE    &kp ENTER  &sk LEFT_SHIFT  &to 1
+              &none  &none  &none  &none  &none        &none      &kp PAGE_DOWN   &kp PAGE_UP  &kp INS    &none
+              &none  &none  &none  &none  &none        &kp LEFT   &kp DOWN        &kp UP       &kp RIGHT  &none
+&kp CAPSLOCK  &none  &none  &none  &none  &none        &none      &kp END         &kp HOME     &kp PSCRN  &none  &kp BACKSPACE
+                            &to 0  &to 2  &kp SPACE    &kp ENTER  &sk LEFT_SHIFT  &to 1
             >;
         };
     };
