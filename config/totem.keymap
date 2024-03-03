@@ -207,10 +207,10 @@
         LAYER_0 {
             label = "LAYER_0";
             bindings = <
-              &kp Q  &kp W  &kp E        &kp R          &kp T        &kp Y      &kp U           &kp I      &kp O    &kp P
-              &kp A  &kp S  &kp D        &kp F          &kp G        &kp H      &kp J           &kp K      &kp L    &kp SEMI
-&kp CAPSLOCK  &kp Z  &kp X  &kp C        &kp V          &kp B        &kp N      &kp M           &kp COMMA  &kp DOT  &kp SLASH  &kp BACKSPACE
-                            &key_repeat  &sk LEFT_META  &kp SPACE    &kp ENTER  &sk LEFT_SHIFT  &to 1
+              &kp Q  &kp W  &kp E  &kp R          &kp T        &kp Y      &kp U           &kp I      &kp O    &kp P
+              &kp A  &kp S  &kp D  &kp F          &kp G        &kp H      &kp J           &kp K      &kp L    &kp SEMI
+&kp CAPSLOCK  &kp Z  &kp X  &kp C  &kp V          &kp B        &kp N      &kp M           &kp COMMA  &kp DOT  &kp SLASH  &kp BACKSPACE
+                            &mo 4  &sk LEFT_META  &kp SPACE    &kp ENTER  &sk LEFT_SHIFT  &to 1
             >;
         };
 
@@ -244,13 +244,26 @@
             >;
         };
 
-        layer_4 {
+        LAYER_4 {
             bindings = <
         &a_acute       &none     &e_acute       &none  &none     &none   &u_acute  &i_acute  &o_acute       &none
         &a_circumflex  &a_tilde  &e_circumflex  &none  &none     &none   &none     &none     &o_circumflex  &none
 &trans  &a_grave       &none     &none          &none  &none     &none   &none     &none     &none          &none  &trans
-                                 &to 0          &none  &trans    &trans  &trans    &none
+                                 &to 0          &none  &trans    &trans  &trans    &mo 5
             >;
+
+            label = "LAYER_4";
+        };
+
+        LAYER_5 {
+            bindings = <
+        &shift_a_acute       &none           &shift_e_acute       &none  &none     &none   &shift_u_acute  &shift_i_acute  &shift_o_acute       &none
+        &shift_a_circumflex  &shift_a_tilde  &shift_e_circumflex  &none  &none     &none   &none           &none           &shift_o_circumflex  &none
+&trans  &shift_a_grave       &none           &none                &none  &none     &none   &none           &none           &none                &none  &trans
+                                             &to 0                &none  &trans    &trans  &trans          &none
+            >;
+
+            label = "LAYER_5";
         };
     };
 };
