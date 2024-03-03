@@ -63,11 +63,15 @@
         a_acute: a_acute {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_tap>,
-                <&kp K_CONTEXT_MENU &kp SINGLE_QUOTE &kp A>;
-
+            bindings = <&kp K_CONTEXT_MENU &kp SINGLE_QUOTE &kp A>;
             label = "A_ACUTE";
+        };
+
+        shift_a_acute: shift_a_acute {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp K_CONTEXT_MENU &kp SINGLE_QUOTE &kp LS(A)>;
+            label = "SHIFT_A_ACUTE";
         };
     };
 
