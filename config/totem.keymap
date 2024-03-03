@@ -87,6 +87,12 @@
             key-positions = <7 8>;
             layers = <0 1 2 3 4 5>;
         };
+
+        combo_end {
+            bindings = <&kp END>;
+            key-positions = <27 28 29>;
+            layers = <0 1 2 3 4 5>;
+        };
     };
 
     macros {
