@@ -129,6 +129,62 @@
             bindings = <&kp K_CONTEXT_MENU &kp SINGLE_QUOTE &kp LS(U)>;
             label = "SHIFT_U_ACUTE";
         };
+
+        a_circumflex: a_circumflex {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp K_CONTEXT_MENU &kp CARET &kp A>;
+            label = "A_CIRCUMFLEX";
+        };
+
+        e_circumflex: e_circumflex {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp K_CONTEXT_MENU &kp CARET &kp E>;
+            label = "E_CIRCUMFLEX";
+        };
+
+        o_circumflex: o_circumflex {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp K_CONTEXT_MENU &kp CARET &kp O>;
+            label = "O_CIRCUMFLEX";
+        };
+
+        shift_a_circumflex: shift_a_circumflex {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp K_CONTEXT_MENU &kp CARET &kp LS(A)>;
+            label = "SHIFT_A_CIRCUMFLEX";
+        };
+
+        shift_e_circumflex: shift_e_circumflex {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp K_CONTEXT_MENU &kp CARET &kp LS(E)>;
+            label = "SHIFT_E_CIRCUMFLEX";
+        };
+
+        shift_o_circumflex: shift_o_circumflex {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp K_CONTEXT_MENU &kp CARET &kp LS(O)>;
+            label = "SHIFT_O_CIRCUMFLEX";
+        };
+
+        a_tilde: a_tilde {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp K_CONTEXT_MENU &kp TILDE &kp A>;
+            label = "A_TILDE";
+        };
+
+        shift_a_tilde: shift_a_tilde {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp K_CONTEXT_MENU &kp TILDE &kp LS(A)>;
+            label = "SHIFT_A_TILDE";
+        };
     };
 
     keymap {
