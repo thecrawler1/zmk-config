@@ -307,9 +307,9 @@
         LAYER_3 {
             label = "LAYER_3";
             bindings = <
-        &none  &none  &none  &none  &none     &none     &kp PAGE_DOWN  &kp PAGE_UP  &kp INS    &none
-        &none  &none  &none  &none  &none     &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT  &none
-&trans  &none  &none  &none  &none  &none     &none     &kp END        &kp HOME     &kp PSCRN  &none  &trans
+        &none  &none  &none  &none  &none     &none     &kp PAGE_DOWN  &kp PAGE_UP  &kp PRINTSCREEN  &kp INSERT
+        &none  &none  &none  &none  &none     &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT        &kp DELETE
+&trans  &none  &none  &none  &none  &none     &none     &kp END        &kp HOME     &none            &none       &trans
                       &to 0  &to 2  &trans    &trans    &trans         &to 1
             >;
         };
