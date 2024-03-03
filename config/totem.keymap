@@ -199,6 +199,20 @@
             bindings = <&kp K_CONTEXT_MENU &kp GRAVE &kp LS(A)>;
             label = "SHIFT_A_GRAVE";
         };
+
+        c_cedilla: c_cedilla {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp K_CONTEXT_MENU &kp COMMA &kp C>;
+            label = "C_CEDILLA";
+        };
+
+        shift_c_cedilla: shift_c_cedilla {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp K_CONTEXT_MENU &kp COMMA &kp LS(C)>;
+            label = "SHIFT_C_CEDILLA";
+        };
     };
 
     keymap {
@@ -248,7 +262,7 @@
             bindings = <
         &a_acute       &none     &e_acute       &none  &none     &none   &u_acute  &i_acute  &o_acute       &none
         &a_circumflex  &a_tilde  &e_circumflex  &none  &none     &none   &none     &none     &o_circumflex  &none
-&trans  &a_grave       &none     &none          &none  &none     &none   &none     &none     &none          &none  &trans
+&trans  &a_grave       &none     &c_cedilla     &none  &none     &none   &none     &none     &none          &none  &trans
                                  &to 0          &none  &trans    &trans  &trans    &mo 5
             >;
 
@@ -259,7 +273,7 @@
             bindings = <
         &shift_a_acute       &none           &shift_e_acute       &none  &none     &none   &shift_u_acute  &shift_i_acute  &shift_o_acute       &none
         &shift_a_circumflex  &shift_a_tilde  &shift_e_circumflex  &none  &none     &none   &none           &none           &shift_o_circumflex  &none
-&trans  &shift_a_grave       &none           &none                &none  &none     &none   &none           &none           &none                &none  &trans
+&trans  &shift_a_grave       &none           &shift_c_cedilla     &none  &none     &none   &none           &none           &none                &none  &trans
                                              &to 0                &none  &trans    &trans  &trans          &none
             >;
 
