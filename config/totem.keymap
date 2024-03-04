@@ -37,61 +37,61 @@
         combo_left_ctrl {
             bindings = <&kp LEFT_CONTROL>;
             key-positions = <12 13>;
-            layers = <0 1 2 3 4 5>;
+            layers = <0 2 1 3 4 5>;
         };
 
         combo_right_ctrl {
             bindings = <&kp RIGHT_CONTROL>;
             key-positions = <16 17>;
-            layers = <0 1 2 3 4 5>;
+            layers = <0 2 1 3 4 5>;
         };
 
         combo_left_alt {
             bindings = <&kp LEFT_ALT>;
             key-positions = <11 12>;
-            layers = <0 1 2 3 4 5>;
+            layers = <0 2 1 3 4 5>;
         };
 
         combo_right_alt {
             bindings = <&kp RIGHT_ALT>;
             key-positions = <17 18>;
-            layers = <0 1 2 3 4 5>;
+            layers = <0 2 1 3 4 5>;
         };
 
         combo_left_ctrl_alt {
             bindings = <&kp LC(LEFT_ALT)>;
             key-positions = <11 12 13>;
-            layers = <0 1 2 3 4 5>;
+            layers = <0 2 1 3 4 5>;
         };
 
         combo_right_ctrl_alt {
             bindings = <&kp RC(RIGHT_ALT)>;
             key-positions = <16 17 18>;
-            layers = <0 1 2 3 4 5>;
+            layers = <0 2 1 3 4 5>;
         };
 
         combo_esc {
             bindings = <&kp ESC>;
             key-positions = <27 28>;
-            layers = <0 1 2 3 4 5>;
+            layers = <0 2 1 3 4 5>;
         };
 
         combo_tab {
             bindings = <&kp TAB>;
             key-positions = <6 7>;
-            layers = <0 1 2 3 4 5>;
+            layers = <0 2 1 3 4 5>;
         };
 
         combo_shift_tab {
             bindings = <&kp LS(TAB)>;
             key-positions = <7 8>;
-            layers = <0 1 2 3 4 5>;
+            layers = <0 2 1 3 4 5>;
         };
 
         combo_end {
             bindings = <&kp END>;
             key-positions = <27 28 29>;
-            layers = <0 1 2 3 4 5>;
+            layers = <0 2 1 3 4 5>;
         };
     };
 
@@ -252,18 +252,18 @@
     };
 
     behaviors {
-        super_2: super_2 {
+        super_1: super_1 {
             compatible = "zmk,behavior-tap-dance";
-            label = "SUPER_2";
+            label = "SUPER_1";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_META>, <&sl 2>;
+            bindings = <&kp LEFT_META>, <&sl 1>;
         };
 
-        shift_1: shift_1 {
+        shift_2: shift_2 {
             compatible = "zmk,behavior-tap-dance";
-            label = "SHIFT_1";
+            label = "SHIFT_2";
             #binding-cells = <0>;
-            bindings = <&sk LEFT_SHIFT>, <&sl 1>;
+            bindings = <&sk LEFT_SHIFT>, <&sl 2>;
         };
     };
 
@@ -276,27 +276,27 @@
               &kp Q  &kp W  &kp E  &kp R      &kp T       &kp Y     &kp U      &kp I      &kp O    &kp P
               &kp A  &kp S  &kp D  &kp F      &kp G       &kp H     &kp J      &kp K      &kp L    &kp SEMI
 &kp CAPSLOCK  &kp Z  &kp X  &kp C  &kp V      &kp B       &kp N     &kp M      &kp COMMA  &kp DOT  &kp SLASH  &kp BACKSPACE
-                            &sl 4  &kp SPACE  &super_2    &shift_1  &kp ENTER  &to 1
+                            &sl 4  &kp SPACE  &super_1    &shift_2  &kp ENTER  &to 1
             >;
         };
 
         LAYER_1 {
             label = "LAYER_1";
             bindings = <
-        &kp GRAVE         &kp EXCLAMATION    &kp HASH         &kp PERCENT            &none    &none      &kp STAR        &kp AMPERSAND  &kp AT      &none
-        &kp SINGLE_QUOTE  &kp LEFT_BRACKET   &kp LEFT_BRACE   &kp LEFT_PARENTHESIS   &none    &kp CARET  &kp MINUS       &kp EQUAL      &kp DOLLAR  &kp DOUBLE_QUOTES
-&trans  &kp TILDE         &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp RIGHT_PARENTHESIS  &none    &none      &kp UNDERSCORE  &kp PLUS       &kp PIPE    &kp BACKSLASH      &trans
-                                             &to 0            &trans                 &to 2    &trans     &trans          &to 3
+              &kp F1   &kp F2   &kp F3  &kp F4  &kp F5    &kp F6  &kp F7             &kp F8           &kp F9  &kp F10
+              &kp N1   &kp N2   &kp N3  &kp N4  &kp N5    &kp N6  &kp N7             &kp N8           &kp N9  &kp N0
+&kp CAPSLOCK  &kp F11  &kp F12  &none   &none   &none     &none   &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &none   &kp C_MUTE  &kp BACKSPACE
+                                &to 0   &trans  &to 3     &trans  &trans             &to 2
             >;
         };
 
         LAYER_2 {
             label = "LAYER_2";
             bindings = <
-              &kp F1   &kp F2   &kp F3  &kp F4  &kp F5    &kp F6  &kp F7             &kp F8           &kp F9  &kp F10
-              &kp N1   &kp N2   &kp N3  &kp N4  &kp N5    &kp N6  &kp N7             &kp N8           &kp N9  &kp N0
-&kp CAPSLOCK  &kp F11  &kp F12  &none   &none   &none     &none   &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &none   &kp C_MUTE  &kp BACKSPACE
-                                &to 0   &trans  &to 1     &trans  &trans             &to 3
+        &kp GRAVE         &kp EXCLAMATION    &kp HASH         &kp PERCENT            &none    &none      &kp STAR        &kp AMPERSAND  &kp AT      &none
+        &kp SINGLE_QUOTE  &kp LEFT_BRACKET   &kp LEFT_BRACE   &kp LEFT_PARENTHESIS   &none    &kp CARET  &kp MINUS       &kp EQUAL      &kp DOLLAR  &kp DOUBLE_QUOTES
+&trans  &kp TILDE         &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp RIGHT_PARENTHESIS  &none    &none      &kp UNDERSCORE  &kp PLUS       &kp PIPE    &kp BACKSLASH      &trans
+                                             &to 0            &trans                 &to 1    &trans     &trans          &to 3
             >;
         };
 
@@ -306,7 +306,7 @@
         &none  &none  &none  &none   &none    &none     &kp PAGE_DOWN  &kp PAGE_UP  &kp PRINTSCREEN  &kp INSERT
         &none  &none  &none  &none   &none    &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT        &kp DELETE
 &trans  &none  &none  &none  &none   &none    &none     &kp END        &kp HOME     &none            &none       &trans
-                      &to 0  &trans  &to 2    &trans    &trans         &to 1
+                      &to 0  &trans  &to 1    &trans    &trans         &to 2
             >;
         };
 
