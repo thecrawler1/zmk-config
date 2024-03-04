@@ -265,6 +265,15 @@
             #binding-cells = <0>;
             bindings = <&sk LEFT_SHIFT>, <&sl 2>;
         };
+
+        mo_sl: mo_sl {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MO_SL";
+            bindings = <&mo>, <&sl>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <400>;
+        };
     };
 
     keymap {
@@ -283,10 +292,10 @@
         LAYER_1 {
             label = "LAYER_1";
             bindings = <
-              &kp F1   &kp F2   &kp F3  &kp F4  &kp F5    &kp F6  &kp F7             &kp F8           &kp F9      &kp F10
-              &kp N1   &kp N2   &kp N3  &kp N4  &kp N5    &kp N6  &kp N7             &kp N8           &kp N9      &kp N0
-&kp CAPSLOCK  &kp F11  &kp F12  &none   &none   &none     &none   &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_MUTE  &none    &kp BACKSPACE
-                                &to 0   &trans  &to 3     &trans  &trans             &to 2
+              &kp F1   &kp F2   &kp F3      &kp F4  &kp F5    &kp F6  &kp F7             &kp F8           &kp F9      &kp F10
+              &kp N1   &kp N2   &kp N3      &kp N4  &kp N5    &kp N6  &kp N7             &kp N8           &kp N9      &kp N0
+&kp CAPSLOCK  &kp F11  &kp F12  &none       &none   &none     &none   &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_MUTE  &none    &kp BACKSPACE
+                                &mo_sl 3 4  &trans  &to 3     &trans  &trans             &to 2
             >;
         };
 
