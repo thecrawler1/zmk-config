@@ -34,37 +34,37 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_left_ctrl {
+        combo_lctrl {
             bindings = <&kp LEFT_CONTROL>;
             key-positions = <12 13>;
             layers = <0 2 1 3 4 5>;
         };
 
-        combo_right_ctrl {
+        combo_rctrl {
             bindings = <&kp RIGHT_CONTROL>;
             key-positions = <16 17>;
             layers = <0 2 1 3 4 5>;
         };
 
-        combo_left_alt {
+        combo_lalt {
             bindings = <&kp LEFT_ALT>;
             key-positions = <11 12>;
             layers = <0 2 1 3 4 5>;
         };
 
-        combo_right_alt {
+        combo_ralt {
             bindings = <&kp RIGHT_ALT>;
             key-positions = <17 18>;
             layers = <0 2 1 3 4 5>;
         };
 
-        combo_left_ctrl_alt {
+        combo_lctrl_lalt {
             bindings = <&kp LC(LEFT_ALT)>;
             key-positions = <11 12 13>;
             layers = <0 2 1 3 4 5>;
         };
 
-        combo_right_ctrl_alt {
+        combo_rctrl_ralt {
             bindings = <&kp RC(RIGHT_ALT)>;
             key-positions = <16 17 18>;
             layers = <0 2 1 3 4 5>;
@@ -82,7 +82,7 @@
             layers = <0 2 1 3 4 5>;
         };
 
-        combo_shift_tab {
+        combo_stab {
             bindings = <&kp LS(TAB)>;
             key-positions = <7 8>;
             layers = <0 2 1 3 4 5>;
@@ -131,35 +131,35 @@
             label = "U_ACUTE";
         };
 
-        shift_a_acute: shift_a_acute {
+        sa_acute: shift_a_acute {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp K_CONTEXT_MENU &kp SINGLE_QUOTE &kp LS(A)>;
             label = "SHIFT_A_ACUTE";
         };
 
-        shift_e_acute: shift_e_acute {
+        se_acute: shift_e_acute {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp K_CONTEXT_MENU &kp SINGLE_QUOTE &kp LS(E)>;
             label = "SHIFT_E_ACUTE";
         };
 
-        shift_i_acute: shift_i_acute {
+        si_acute: shift_i_acute {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp K_CONTEXT_MENU &kp SINGLE_QUOTE &kp LS(I)>;
             label = "SHIFT_I_ACUTE";
         };
 
-        shift_o_acute: shift_o_acute {
+        so_acute: shift_o_acute {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp K_CONTEXT_MENU &kp SINGLE_QUOTE &kp LS(O)>;
             label = "SHIFT_O_ACUTE";
         };
 
-        shift_u_acute: shift_u_acute {
+        su_acute: shift_u_acute {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp K_CONTEXT_MENU &kp SINGLE_QUOTE &kp LS(U)>;
@@ -187,21 +187,21 @@
             label = "O_CIRCUMFLEX";
         };
 
-        shift_a_circumflex: shift_a_circumflex {
+        sa_circumflex: shift_a_circumflex {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp K_CONTEXT_MENU &kp CARET &kp LS(A)>;
             label = "SHIFT_A_CIRCUMFLEX";
         };
 
-        shift_e_circumflex: shift_e_circumflex {
+        se_circumflex: shift_e_circumflex {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp K_CONTEXT_MENU &kp CARET &kp LS(E)>;
             label = "SHIFT_E_CIRCUMFLEX";
         };
 
-        shift_o_circumflex: shift_o_circumflex {
+        so_circumflex: shift_o_circumflex {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp K_CONTEXT_MENU &kp CARET &kp LS(O)>;
@@ -215,7 +215,7 @@
             label = "A_TILDE";
         };
 
-        shift_a_tilde: shift_a_tilde {
+        sa_tilde: shift_a_tilde {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp K_CONTEXT_MENU &kp TILDE &kp LS(A)>;
@@ -229,7 +229,7 @@
             label = "A_CRASIS";
         };
 
-        shift_a_grave: shift_a_grave {
+        sa_grave: shift_a_grave {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp K_CONTEXT_MENU &kp GRAVE &kp LS(A)>;
@@ -243,11 +243,25 @@
             label = "C_CEDILLA";
         };
 
-        shift_c_cedilla: shift_c_cedilla {
+        sc_cedilla: shift_c_cedilla {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp K_CONTEXT_MENU &kp COMMA &kp LS(C)>;
             label = "SHIFT_C_CEDILLA";
+        };
+
+        o_tilde: o_tilde {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp K_CONTEXT_MENU &kp TILDE &kp O>;
+            label = "O_TILDE";
+        };
+
+        so_tilde: so_tilde {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp K_CONTEXT_MENU &kp TILDE &kp LS(O)>;
+            label = "SO_TILDE";
         };
     };
 
@@ -322,8 +336,8 @@
         LAYER_4 {
             bindings = <
         &a_acute       &trans    &e_acute       &trans  &trans    &trans  &u_acute  &i_acute  &o_acute       &trans
-        &a_circumflex  &a_tilde  &e_circumflex  &trans  &trans    &trans  &trans    &trans    &o_circumflex  &trans
-&trans  &a_grave       &trans    &c_cedilla     &trans  &trans    &trans  &trans    &trans    &trans         &trans  &trans
+        &a_circumflex  &a_grave  &e_circumflex  &trans  &trans    &trans  &trans    &trans    &o_circumflex  &trans
+&trans  &a_tilde       &trans    &c_cedilla     &trans  &trans    &trans  &trans    &trans    &o_tilde       &trans  &trans
                                  &to 0          &trans  &trans    &sl 5   &trans    &none
             >;
 
@@ -332,10 +346,10 @@
 
         LAYER_5 {
             bindings = <
-        &shift_a_acute       &trans          &shift_e_acute       &trans  &trans    &trans  &shift_u_acute  &shift_i_acute  &shift_o_acute       &trans
-        &shift_a_circumflex  &shift_a_tilde  &shift_e_circumflex  &trans  &trans    &trans  &trans          &trans          &shift_o_circumflex  &trans
-&trans  &shift_a_grave       &trans          &shift_c_cedilla     &trans  &trans    &trans  &trans          &trans          &trans               &trans  &trans
-                                             &to 0                &trans  &trans    &none   &trans          &none
+        &sa_acute       &trans     &se_acute       &trans  &trans    &trans  &su_acute  &si_acute  &so_acute       &trans
+        &sa_circumflex  &sa_grave  &se_circumflex  &trans  &trans    &trans  &trans     &trans     &so_circumflex  &trans
+&trans  &sa_tilde       &trans     &sc_cedilla     &trans  &trans    &trans  &trans     &trans     &so_tilde       &trans  &trans
+                                   &to 0           &trans  &trans    &none   &trans     &none
             >;
 
             label = "LAYER_5";
