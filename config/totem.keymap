@@ -282,20 +282,20 @@
         LAYER_0 {
             label = "LAYER_0";
             bindings = <
-              &kp Q  &kp W  &kp E  &kp R      &kp T       &kp Y     &kp U      &kp I      &kp O    &kp P
-              &kp A  &kp S  &kp D  &kp F      &kp G       &kp H     &kp J      &kp K      &kp L    &kp SEMI
-&kp CAPSLOCK  &kp Z  &kp X  &kp C  &kp V      &kp B       &kp N     &kp M      &kp COMMA  &kp DOT  &kp SLASH  &kp BACKSPACE
-                            &sl 4  &kp SPACE  &super_1    &shift_2  &kp ENTER  &to 1
+              &kp Q  &kp W  &kp E       &kp R      &kp T       &kp Y     &kp U      &kp I      &kp O    &kp P
+              &kp A  &kp S  &kp D       &kp F      &kp G       &kp H     &kp J      &kp K      &kp L    &kp SEMI
+&kp CAPSLOCK  &kp Z  &kp X  &kp C       &kp V      &kp B       &kp N     &kp M      &kp COMMA  &kp DOT  &kp SLASH  &kp BACKSPACE
+                            &mo_sl 3 4  &kp SPACE  &super_1    &shift_2  &kp ENTER  &to 1
             >;
         };
 
         LAYER_1 {
             label = "LAYER_1";
             bindings = <
-              &kp F1   &kp F2   &kp F3      &kp F4  &kp F5    &kp F6  &kp F7             &kp F8           &kp F9      &kp F10
-              &kp N1   &kp N2   &kp N3      &kp N4  &kp N5    &kp N6  &kp N7             &kp N8           &kp N9      &kp N0
-&kp CAPSLOCK  &kp F11  &kp F12  &none       &none   &none     &none   &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_MUTE  &none    &kp BACKSPACE
-                                &mo_sl 3 4  &trans  &to 3     &trans  &trans             &to 2
+              &kp F1   &kp F2   &kp F3  &kp F4  &kp F5    &kp F6  &kp F7             &kp F8           &kp F9      &kp F10
+              &kp N1   &kp N2   &kp N3  &kp N4  &kp N5    &kp N6  &kp N7             &kp N8           &kp N9      &kp N0
+&kp CAPSLOCK  &kp F11  &kp F12  &none   &none   &none     &none   &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_MUTE  &none    &kp BACKSPACE
+                                &to 0   &trans  &to 3     &trans  &trans             &to 2
             >;
         };
 
@@ -324,7 +324,7 @@
         &a_acute       &trans    &e_acute       &trans  &trans    &trans  &u_acute  &i_acute  &o_acute       &trans
         &a_circumflex  &a_tilde  &e_circumflex  &trans  &trans    &trans  &trans    &trans    &o_circumflex  &trans
 &trans  &a_grave       &trans    &c_cedilla     &trans  &trans    &trans  &trans    &trans    &trans         &trans  &trans
-                                 &to 0          &trans  &trans    &trans  &trans    &sl 5
+                                 &to 0          &trans  &trans    &sl 5   &trans    &none
             >;
 
             label = "LAYER_4";
@@ -335,7 +335,7 @@
         &shift_a_acute       &trans          &shift_e_acute       &trans  &trans    &trans  &shift_u_acute  &shift_i_acute  &shift_o_acute       &trans
         &shift_a_circumflex  &shift_a_tilde  &shift_e_circumflex  &trans  &trans    &trans  &trans          &trans          &shift_o_circumflex  &trans
 &trans  &shift_a_grave       &trans          &shift_c_cedilla     &trans  &trans    &trans  &trans          &trans          &trans               &trans  &trans
-                                             &to 0                &trans  &trans    &trans  &trans          &trans
+                                             &to 0                &trans  &trans    &none   &trans          &none
             >;
 
             label = "LAYER_5";
