@@ -109,6 +109,7 @@
         combo_right_arrow {
             bindings = <&kp RIGHT>;
             key-positions = <27 28 29>;
+            layers = <0 1 2 3 4 5>;
         };
     };
 
@@ -384,6 +385,17 @@
             >;
 
             label = "LAYER_5";
+        };
+
+        LAYER_6 {
+            bindings = <
+        &trans  &trans  &trans   &trans  &trans            &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans   &trans  &trans            &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans   &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+                        &kp ESC  &trans  &kp LEFT_SHIFT    &trans  &trans  &trans
+            >;
+
+            label = "LAYER_6";
         };
     };
 };
