@@ -115,6 +115,7 @@
         combo_layer_6 {
             bindings = <&to 6>;
             key-positions = <19 30 31>;
+            layers = <0>;
         };
     };
 
