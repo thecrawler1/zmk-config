@@ -111,6 +111,11 @@
             key-positions = <27 28 29>;
             layers = <0 1 2 3 4 5>;
         };
+
+        combo_layer_6 {
+            bindings = <&to 6>;
+            key-positions = <19 30 31>;
+        };
     };
 
     macros {
