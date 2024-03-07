@@ -395,10 +395,10 @@
 
         LAYER_6 {
             bindings = <
-        &trans  &trans  &trans   &trans  &trans            &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans   &trans  &trans            &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans   &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
-                        &kp ESC  &trans  &kp LEFT_SHIFT    &trans  &trans  &trans
+        &trans  &trans  &trans   &trans  &trans            &trans         &trans  &trans  &trans  &trans
+        &trans  &trans  &trans   &trans  &trans            &trans         &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans   &trans  &trans            &trans         &trans  &trans  &trans  &trans  &trans
+                        &kp ESC  &trans  &kp LEFT_SHIFT    &kp LEFT_META  &trans  &trans
             >;
 
             label = "LAYER_6";
