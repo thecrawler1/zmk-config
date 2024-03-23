@@ -308,7 +308,7 @@
             bindings = <
             &kp Q  &kp W  &kp E  &kp R      &kp T            &kp Y           &kp U      &kp I      &kp O    &kp P
             &kp A  &kp S  &kp D  &kp F      &kp G            &kp H           &kp J      &kp K      &kp L    &kp SEMI
-&mo_to 3 0  &kp Z  &kp X  &kp C  &kp V      &kp B            &kp N           &kp M      &kp COMMA  &kp DOT  &kp SLASH  &to 1
+&mo_to 3 0  &kp Z  &kp X  &kp C  &kp V      &kp B            &kp N           &kp M      &kp COMMA  &kp DOT  &kp SLASH  &mo_to 4 1
                           &sl 1  &kp SPACE  &sk LEFT_META    &sk LEFT_SHIFT  &kp ENTER  &sl 2
             >;
         };
@@ -318,7 +318,7 @@
             bindings = <
         &kp F1   &kp F2   &kp F3             &kp F4           &kp F5        &kp F6     &kp F7        &kp F8     &kp F9    &kp F10
         &kp N1   &kp N2   &kp N3             &kp N4           &kp N5        &kp N6     &kp N7        &kp N8     &kp N9    &kp N0
-&trans  &kp F11  &kp F12  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_MUTE    &kp SLASH  &kp ASTERISK  &kp MINUS  &kp PLUS  &kp EQUAL  &to 2
+&trans  &kp F11  &kp F12  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_MUTE    &kp SLASH  &kp ASTERISK  &kp MINUS  &kp PLUS  &kp EQUAL  &mo_to 4 2
                           &trans             &trans           &trans        &trans     &trans        &trans
             >;
         };
@@ -328,7 +328,7 @@
             bindings = <
         &kp GRAVE         &kp EXCLAMATION    &kp HASH         &kp PERCENT            &none     &none      &kp STAR        &kp AMPERSAND  &kp AT      &none
         &kp SINGLE_QUOTE  &kp LEFT_BRACKET   &kp LEFT_BRACE   &kp LEFT_PARENTHESIS   &none     &kp CARET  &kp MINUS       &kp EQUAL      &kp DOLLAR  &kp DOUBLE_QUOTES
-&trans  &kp TILDE         &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp RIGHT_PARENTHESIS  &none     &none      &kp UNDERSCORE  &kp PLUS       &kp PIPE    &kp BACKSLASH      &to 3
+&trans  &kp TILDE         &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp RIGHT_PARENTHESIS  &none     &none      &kp UNDERSCORE  &kp PLUS       &kp PIPE    &kp BACKSLASH      &mo 4
                                              &trans           &trans                 &trans    &trans     &trans          &trans
             >;
         };
