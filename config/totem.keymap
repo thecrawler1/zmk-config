@@ -112,10 +112,16 @@
             layers = <0 1 2 3 5 6>;
         };
 
-        combo_layer_6 {
+        combo_layer_7 {
             bindings = <&to 7>;
             key-positions = <19 30 31>;
             layers = <0>;
+        };
+
+        combo_cut {
+            bindings = <&kp LC(X)>;
+            key-positions = <23 24 22>;
+            layers = <0 1 2 3 5 6>;
         };
     };
 
