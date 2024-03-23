@@ -326,6 +326,15 @@
             #binding-cells = <2>;
             tapping-term-ms = <400>;
         };
+
+        mo_to: mo_to {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MO_TO";
+            bindings = <&mo>, <&to>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
     };
 
     keymap {
@@ -334,20 +343,20 @@
         LAYER_0 {
             label = "LAYER_0";
             bindings = <
-              &kp Q  &kp W  &kp E       &kp R      &kp T       &kp Y     &kp U      &kp I      &kp O    &kp P
-              &kp A  &kp S  &kp D       &kp F      &kp G       &kp H     &kp J      &kp K      &kp L    &kp SEMI
-&kp CAPSLOCK  &kp Z  &kp X  &kp C       &kp V      &kp B       &kp N     &kp M      &kp COMMA  &kp DOT  &kp SLASH  &kp BACKSPACE
-                            &mo_sl 3 4  &kp SPACE  &super_1    &shift_2  &kp ENTER  &to 1
+            &kp Q  &kp W  &kp E       &kp R      &kp T       &kp Y     &kp U      &kp I      &kp O    &kp P
+            &kp A  &kp S  &kp D       &kp F      &kp G       &kp H     &kp J      &kp K      &kp L    &kp SEMI
+&mo_to 3 0  &kp Z  &kp X  &kp C       &kp V      &kp B       &kp N     &kp M      &kp COMMA  &kp DOT  &kp SLASH  &to 1
+                          &mo_sl 3 4  &kp SPACE  &super_1    &shift_2  &kp ENTER  &to 1
             >;
         };
 
         LAYER_1 {
             label = "LAYER_1";
             bindings = <
-              &kp F1   &kp F2   &kp F3  &kp F4  &kp F5    &kp F6  &kp F7             &kp F8           &kp F9      &kp F10
-              &kp N1   &kp N2   &kp N3  &kp N4  &kp N5    &kp N6  &kp N7             &kp N8           &kp N9      &kp N0
-&kp CAPSLOCK  &kp F11  &kp F12  &none   &none   &none     &none   &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_MUTE  &none    &kp BACKSPACE
-                                &to 0   &trans  &to 3     &trans  &trans             &to 2
+        &kp F1   &kp F2   &kp F3  &kp F4  &kp F5    &kp F6  &kp F7             &kp F8           &kp F9      &kp F10
+        &kp N1   &kp N2   &kp N3  &kp N4  &kp N5    &kp N6  &kp N7             &kp N8           &kp N9      &kp N0
+&trans  &kp F11  &kp F12  &none   &none   &none     &none   &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_MUTE  &none    &trans
+                          &to 0   &trans  &to 3     &trans  &trans             &to 2
             >;
         };
 
