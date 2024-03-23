@@ -356,27 +356,27 @@
         &kp F1   &kp F2   &kp F3  &kp F4  &kp F5    &kp F6  &kp F7             &kp F8           &kp F9      &kp F10
         &kp N1   &kp N2   &kp N3  &kp N4  &kp N5    &kp N6  &kp N7             &kp N8           &kp N9      &kp N0
 &trans  &kp F11  &kp F12  &none   &none   &none     &none   &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_MUTE  &none    &to 2
-                          &to 0   &trans  &to 3     &trans  &trans             &to 2
+                          &trans  &trans  &trans    &trans  &trans             &trans
             >;
         };
 
         LAYER_2 {
             label = "LAYER_2";
             bindings = <
-        &kp GRAVE         &kp EXCLAMATION    &kp HASH         &kp PERCENT            &none    &none      &kp STAR        &kp AMPERSAND  &kp AT      &none
-        &kp SINGLE_QUOTE  &kp LEFT_BRACKET   &kp LEFT_BRACE   &kp LEFT_PARENTHESIS   &none    &kp CARET  &kp MINUS       &kp EQUAL      &kp DOLLAR  &kp DOUBLE_QUOTES
-&trans  &kp TILDE         &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp RIGHT_PARENTHESIS  &none    &none      &kp UNDERSCORE  &kp PLUS       &kp PIPE    &kp BACKSLASH      &to 3
-                                             &to 0            &trans                 &to 1    &trans     &trans          &to 3
+        &kp GRAVE         &kp EXCLAMATION    &kp HASH         &kp PERCENT            &none     &none      &kp STAR        &kp AMPERSAND  &kp AT      &none
+        &kp SINGLE_QUOTE  &kp LEFT_BRACKET   &kp LEFT_BRACE   &kp LEFT_PARENTHESIS   &none     &kp CARET  &kp MINUS       &kp EQUAL      &kp DOLLAR  &kp DOUBLE_QUOTES
+&trans  &kp TILDE         &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp RIGHT_PARENTHESIS  &none     &none      &kp UNDERSCORE  &kp PLUS       &kp PIPE    &kp BACKSLASH      &to 3
+                                             &trans           &trans                 &trans    &trans     &trans          &trans
             >;
         };
 
         LAYER_3 {
             label = "LAYER_3";
             bindings = <
-        &none  &none  &none  &none   &none    &none     &kp PAGE_DOWN  &kp PAGE_UP  &kp PRINTSCREEN  &kp INSERT
-        &none  &none  &none  &none   &none    &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT        &kp DELETE
-&trans  &none  &none  &none  &none   &none    &none     &kp END        &kp HOME     &none            &none       &none
-                      &to 0  &trans  &to 1    &trans    &trans         &to 2
+        &none  &none  &none   &none   &none     &none     &kp PAGE_DOWN  &kp PAGE_UP  &kp PRINTSCREEN  &kp INSERT
+        &none  &none  &none   &none   &none     &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT        &kp DELETE
+&trans  &none  &none  &none   &none   &none     &none     &kp END        &kp HOME     &none            &none       &none
+                      &trans  &trans  &trans    &trans    &trans         &trans
             >;
         };
 
@@ -385,7 +385,7 @@
         &a_acute       &trans    &e_acute       &trans  &trans    &trans  &u_acute  &i_acute  &o_acute       &trans
         &a_circumflex  &a_grave  &e_circumflex  &trans  &trans    &trans  &trans    &trans    &o_circumflex  &trans
 &trans  &a_tilde       &trans    &c_cedilla     &trans  &trans    &trans  &trans    &trans    &o_tilde       &trans  &trans
-                                 &to 0          &trans  &trans    &sl 5   &trans    &none
+                                 &trans         &trans  &trans    &sl 5   &trans    &none
             >;
 
             label = "LAYER_4";
@@ -396,7 +396,7 @@
         &sa_acute       &trans     &se_acute       &trans  &trans    &trans  &su_acute  &si_acute  &so_acute       &trans
         &sa_circumflex  &sa_grave  &se_circumflex  &trans  &trans    &trans  &trans     &trans     &so_circumflex  &trans
 &trans  &sa_tilde       &trans     &sc_cedilla     &trans  &trans    &trans  &trans     &trans     &so_tilde       &trans  &trans
-                                   &to 0           &trans  &trans    &none   &trans     &none
+                                   &trans          &trans  &trans    &none   &trans     &none
             >;
 
             label = "LAYER_5";
