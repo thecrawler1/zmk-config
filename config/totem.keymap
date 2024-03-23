@@ -304,29 +304,6 @@
     };
 
     behaviors {
-        super_1: super_1 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "SUPER_1";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_META>, <&sl 1>;
-        };
-
-        shift_2: shift_2 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "SHIFT_2";
-            #binding-cells = <0>;
-            bindings = <&sk LEFT_SHIFT>, <&sl 2>;
-        };
-
-        mo_sl: mo_sl {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MO_SL";
-            bindings = <&mo>, <&sl>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <400>;
-        };
-
         mo_to: mo_to {
             compatible = "zmk,behavior-hold-tap";
             label = "MO_TO";
