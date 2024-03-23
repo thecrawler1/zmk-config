@@ -316,30 +316,30 @@
         LAYER_1 {
             label = "LAYER_1";
             bindings = <
-        &kp F1   &kp F2   &kp F3    &kp F4     &kp F5       &kp F6  &kp F7        &kp F8     &kp F9   &kp F10
-        &kp N1   &kp N2   &kp N3    &kp N4     &kp N5       &kp N6  &kp N7        &kp N8     &kp N9   &kp N0
-&trans  &kp F11  &kp F12  &kp PLUS  &kp MINUS  &kp EQUAL    &none   &kp ASTERISK  &kp COMMA  &kp DOT  &kp SLASH  &mo_to 4 2
-                          &trans    &trans     &trans       &trans  &trans        &trans
+        &kp F1   &kp F2   &kp F3    &kp F4     &kp F5    &kp F6     &kp F7        &kp F8     &kp F9   &kp F10
+        &kp N1   &kp N2   &kp N3    &kp N4     &kp N5    &kp N6     &kp N7        &kp N8     &kp N9   &kp N0
+&trans  &kp F11  &kp F12  &kp PLUS  &kp MINUS  &none     &kp EQUAL  &kp ASTERISK  &kp COMMA  &kp DOT  &kp SLASH  &mo_to 4 2
+                          &trans    &trans     &trans    &trans     &trans        &trans
             >;
         };
 
         LAYER_2 {
             label = "LAYER_2";
             bindings = <
-        &kp GRAVE         &kp EXCLAMATION    &kp HASH         &kp PERCENT            &none     &none      &none                  &kp AMPERSAND    &kp AT             &none
-        &kp SINGLE_QUOTE  &kp LEFT_BRACKET   &kp LEFT_BRACE   &kp LEFT_PARENTHESIS   &none     &kp CARET  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp DOUBLE_QUOTES
-&trans  &kp TILDE         &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp RIGHT_PARENTHESIS  &none     &none      &kp UNDERSCORE         &none            &kp PIPE           &kp BACKSLASH      &mo 4
-                                             &trans           &trans                 &trans    &trans     &trans                 &trans
+        &none             &none             &none           &none                 &none     &none   &none                  &none            &none              &none
+        &kp SINGLE_QUOTE  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &none     &none   &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp DOUBLE_QUOTES
+&trans  &none             &none             &none           &none                 &none     &none   &none                  &none            &none              &kp BACKSLASH      &mo 4
+                                            &trans          &trans                &trans    &trans  &trans                 &trans
             >;
         };
 
         LAYER_3 {
             label = "LAYER_3";
             bindings = <
-        &none  &none  &none   &none   &none     &kp HOME         &kp PAGE_DOWN  &kp PAGE_UP  &kp END      &none
-        &none  &none  &none   &none   &none     &kp LEFT         &kp DOWN       &kp UP       &kp RIGHT    &none
-&trans  &none  &none  &none   &none   &none     &kp LC(LS(TAB))  &kp LC(D)      &kp LC(U)    &kp LC(TAB)  &none  &none
-                      &trans  &trans  &trans    &trans           &trans         &trans
+        &none  &none  &none   &none   &none     &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &none
+        &none  &none  &none   &none   &none     &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT  &kp LC(TAB)
+&trans  &none  &none  &none   &none   &none     &none     &kp LC(D)      &kp LC(U)    &none      &none        &none
+                      &trans  &trans  &trans    &trans    &trans         &trans
             >;
         };
 
