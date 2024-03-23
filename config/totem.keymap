@@ -326,19 +326,19 @@
         LAYER_2 {
             label = "LAYER_2";
             bindings = <
-        &kp GRAVE         &kp EXCLAMATION    &kp HASH         &kp PERCENT            &none     &none      &kp STAR        &kp AMPERSAND  &kp AT      &none
-        &kp SINGLE_QUOTE  &kp LEFT_BRACKET   &kp LEFT_BRACE   &kp LEFT_PARENTHESIS   &none     &kp CARET  &kp MINUS       &kp EQUAL      &kp DOLLAR  &kp DOUBLE_QUOTES
-&trans  &kp TILDE         &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp RIGHT_PARENTHESIS  &none     &none      &kp UNDERSCORE  &kp PLUS       &kp PIPE    &kp BACKSLASH      &mo 4
-                                             &trans           &trans                 &trans    &trans     &trans          &trans
+        &kp GRAVE         &kp EXCLAMATION    &kp HASH         &kp PERCENT            &none     &none      &none                  &kp AMPERSAND    &kp AT             &none
+        &kp SINGLE_QUOTE  &kp LEFT_BRACKET   &kp LEFT_BRACE   &kp LEFT_PARENTHESIS   &none     &kp CARET  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp DOUBLE_QUOTES
+&trans  &kp TILDE         &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp RIGHT_PARENTHESIS  &none     &none      &kp UNDERSCORE         &none            &kp PIPE           &kp BACKSLASH      &mo 4
+                                             &trans           &trans                 &trans    &trans     &trans                 &trans
             >;
         };
 
         LAYER_3 {
             label = "LAYER_3";
             bindings = <
-        &none  &none  &none   &none   &none     &kp HOME         &kp PAGE_DOWN  &kp PAGE_UP  &kp END      &kp PRINTSCREEN
-        &none  &none  &none   &none   &none     &kp LEFT         &kp DOWN       &kp UP       &kp RIGHT    &kp DELETE
-&trans  &none  &none  &none   &none   &none     &kp LC(LS(TAB))  &kp LC(D)      &kp LC(U)    &kp LC(TAB)  &kp INSERT       &none
+        &none  &none  &none   &none   &none     &kp HOME         &kp PAGE_DOWN  &kp PAGE_UP  &kp END      &none
+        &none  &none  &none   &none   &none     &kp LEFT         &kp DOWN       &kp UP       &kp RIGHT    &none
+&trans  &none  &none  &none   &none   &none     &kp LC(LS(TAB))  &kp LC(D)      &kp LC(U)    &kp LC(TAB)  &none  &none
                       &trans  &trans  &trans    &trans           &trans         &trans
             >;
         };
