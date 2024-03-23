@@ -355,7 +355,7 @@
             bindings = <
         &kp F1   &kp F2   &kp F3  &kp F4  &kp F5    &kp F6  &kp F7             &kp F8           &kp F9      &kp F10
         &kp N1   &kp N2   &kp N3  &kp N4  &kp N5    &kp N6  &kp N7             &kp N8           &kp N9      &kp N0
-&trans  &kp F11  &kp F12  &none   &none   &none     &none   &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_MUTE  &none    &trans
+&trans  &kp F11  &kp F12  &none   &none   &none     &none   &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_MUTE  &none    &to 2
                           &to 0   &trans  &to 3     &trans  &trans             &to 2
             >;
         };
@@ -365,7 +365,7 @@
             bindings = <
         &kp GRAVE         &kp EXCLAMATION    &kp HASH         &kp PERCENT            &none    &none      &kp STAR        &kp AMPERSAND  &kp AT      &none
         &kp SINGLE_QUOTE  &kp LEFT_BRACKET   &kp LEFT_BRACE   &kp LEFT_PARENTHESIS   &none    &kp CARET  &kp MINUS       &kp EQUAL      &kp DOLLAR  &kp DOUBLE_QUOTES
-&trans  &kp TILDE         &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp RIGHT_PARENTHESIS  &none    &none      &kp UNDERSCORE  &kp PLUS       &kp PIPE    &kp BACKSLASH      &trans
+&trans  &kp TILDE         &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp RIGHT_PARENTHESIS  &none    &none      &kp UNDERSCORE  &kp PLUS       &kp PIPE    &kp BACKSLASH      &to 3
                                              &to 0            &trans                 &to 1    &trans     &trans          &to 3
             >;
         };
@@ -375,7 +375,7 @@
             bindings = <
         &none  &none  &none  &none   &none    &none     &kp PAGE_DOWN  &kp PAGE_UP  &kp PRINTSCREEN  &kp INSERT
         &none  &none  &none  &none   &none    &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT        &kp DELETE
-&trans  &none  &none  &none  &none   &none    &none     &kp END        &kp HOME     &none            &none       &trans
+&trans  &none  &none  &none  &none   &none    &none     &kp END        &kp HOME     &none            &none       &none
                       &to 0  &trans  &to 1    &trans    &trans         &to 2
             >;
         };
