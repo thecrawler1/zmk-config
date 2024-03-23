@@ -342,10 +342,10 @@
         LAYER_3 {
             label = "LAYER_3";
             bindings = <
-        &none  &none  &none   &none   &none     &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &none
-        &none  &none  &none   &none   &none     &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT  &kp LC(TAB)
-&trans  &none  &none  &none   &none   &none     &none     &kp LC(D)      &kp LC(U)    &none      &none        &none
-                      &trans  &trans  &trans    &trans    &trans         &trans
+        &none  &none  &none   &none   &none     &kp HOME              &kp PAGE_DOWN  &kp PAGE_UP  &kp END                &none
+        &none  &none  &none   &none   &none     &kp LEFT              &kp DOWN       &kp UP       &kp RIGHT              &kp LC(TAB)
+&trans  &none  &none  &none   &none   &none     &kp LC(LEFT_BRACKET)  &kp LC(D)      &kp LC(U)    &kp LC(RIGHT_BRACKET)  &none        &none
+                      &trans  &trans  &trans    &trans                &trans         &trans
             >;
         };
 
