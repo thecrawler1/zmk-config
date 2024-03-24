@@ -351,10 +351,10 @@
 
         LAYER_4 {
             bindings = <
-        &trans  &trans  &trans             &trans           &trans    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans             &trans           &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans             &trans           &trans    &trans  &trans  &trans
+       &none  &none  &none              &none            &none     &none   &none   &none   &none  &none
+       &none  &none  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &none     &none   &none   &none   &none  &none
+&none  &none  &none  &none              &none            &none     &none   &none   &none   &none  &none  &none
+                     &trans             &trans           &trans    &trans  &trans  &trans
             >;
 
             label = "LAYER_4";
