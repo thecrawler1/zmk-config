@@ -82,12 +82,6 @@
             layers = <0 2 1 3 5 6>;
         };
 
-        combo_stab {
-            bindings = <&kp LS(TAB)>;
-            key-positions = <7 8>;
-            layers = <0 2 1 3 5 6>;
-        };
-
         combo_ctrl_backspace {
             bindings = <&kp LC(BACKSPACE)>;
             key-positions = <28 29>;
@@ -365,7 +359,7 @@
         &a_acute       &trans    &e_acute       &trans  &trans    &trans  &u_acute  &i_acute  &o_acute       &trans
         &a_circumflex  &a_grave  &e_circumflex  &trans  &trans    &trans  &trans    &trans    &o_circumflex  &trans
 &trans  &a_tilde       &trans    &c_cedilla     &trans  &trans    &trans  &trans    &trans    &o_tilde       &trans  &trans
-                                 &trans         &trans  &trans    &sl 6   &trans    &none
+                                 &trans         &trans  &trans    &trans  &trans    &trans
             >;
 
             label = "LAYER_5";
@@ -376,7 +370,7 @@
         &sa_acute       &trans     &se_acute       &trans  &trans    &trans  &su_acute  &si_acute  &so_acute       &trans
         &sa_circumflex  &sa_grave  &se_circumflex  &trans  &trans    &trans  &trans     &trans     &so_circumflex  &trans
 &trans  &sa_tilde       &trans     &sc_cedilla     &trans  &trans    &trans  &trans     &trans     &so_tilde       &trans  &trans
-                                   &trans          &trans  &trans    &none   &trans     &none
+                                   &trans          &trans  &trans    &trans  &trans     &trans
             >;
 
             label = "LAYER_6";
@@ -391,6 +385,15 @@
             >;
 
             label = "LAYER_7";
+        };
+
+        layer_8 {
+            bindings = <
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
         };
     };
 };
