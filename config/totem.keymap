@@ -117,6 +117,18 @@
             key-positions = <23 24 22>;
             layers = <0 1 2 3 5 6>;
         };
+
+        combo_layer_5 {
+            bindings = <&to 5>;
+            key-positions = <2 3>;
+            layers = <0 1 2 3 4 5 6>;
+        };
+
+        combo_layer_6 {
+            bindings = <&to 6>;
+            key-positions = <2 1>;
+            layers = <0 1 2 3 4 5 6>;
+        };
     };
 
     macros {
@@ -385,15 +397,6 @@
             >;
 
             label = "LAYER_7";
-        };
-
-        layer_8 {
-            bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
-            >;
         };
     };
 };
