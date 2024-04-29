@@ -10,7 +10,6 @@
 //
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-#include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
@@ -348,9 +347,9 @@
         LAYER_3 {
             label = "LAYER_3";
             bindings = <
-        &none  &none  &none   &none   &none     &kp HOME              &kp LC(LS(TAB))  &kp LC(TAB)  &kp END                &kp PAGE_UP
-        &none  &none  &none   &none   &none     &kp LEFT              &kp DOWN         &kp UP       &kp RIGHT              &kp PAGE_DOWN
-&trans  &none  &none  &none   &none   &none     &kp LC(LEFT_BRACKET)  &kp LC(D)        &kp LC(U)    &kp LC(RIGHT_BRACKET)  &none          &none
+        &none  &none  &none   &none   &none     &kp LC(W)             &kp LC(LS(TAB))  &kp LC(TAB)  &kp LC(T)              &kp LC(R)
+        &none  &none  &none   &none   &none     &kp LEFT              &kp DOWN         &kp UP       &kp RIGHT              &kp LC(PLUS)
+&trans  &none  &none  &none   &none   &none     &kp LC(LEFT_BRACKET)  &kp LC(D)        &kp LC(U)    &kp LC(RIGHT_BRACKET)  &kp LC(MINUS)  &kp F6
                       &trans  &trans  &trans    &trans                &trans           &trans
             >;
         };
@@ -371,7 +370,7 @@
         &a_acute       &trans    &e_acute       &trans  &trans    &trans  &u_acute  &i_acute  &o_acute       &trans
         &a_circumflex  &a_grave  &e_circumflex  &trans  &trans    &trans  &trans    &trans    &o_circumflex  &trans
 &trans  &a_tilde       &trans    &c_cedilla     &trans  &trans    &trans  &trans    &trans    &o_tilde       &trans  &trans
-                                 &trans         &trans  &trans    &trans  &trans    &trans
+                                 &trans         &trans  &trans    &to 6   &trans    &trans
             >;
 
             label = "LAYER_5";
@@ -382,7 +381,7 @@
         &sa_acute       &trans     &se_acute       &trans  &trans    &trans  &su_acute  &si_acute  &so_acute       &trans
         &sa_circumflex  &sa_grave  &se_circumflex  &trans  &trans    &trans  &trans     &trans     &so_circumflex  &trans
 &trans  &sa_tilde       &trans     &sc_cedilla     &trans  &trans    &trans  &trans     &trans     &so_tilde       &trans  &trans
-                                   &trans          &trans  &trans    &trans  &trans     &trans
+                                   &trans          &trans  &trans    &to 5   &trans     &trans
             >;
 
             label = "LAYER_6";
