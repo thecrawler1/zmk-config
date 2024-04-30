@@ -298,6 +298,34 @@
             bindings = <&kp K_CONTEXT_MENU &kp TILDE &kp LS(O)>;
             label = "SO_TILDE";
         };
+
+        bitwarden: macro_bitwarden {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LS(L))>;
+            label = "MACRO_BITWARDEN";
+        };
+
+        dark_reader: dark_reader {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LA(A))>;
+            label = "DARK_READER";
+        };
+
+        translate_selection: translate_text {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LC(N1))>;
+            label = "TRANSLATE_TEXT";
+        };
+
+        listen_selection: listen_selection {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LC(N2))>;
+            label = "LISTEN_SELECTION";
+        };
     };
 
     behaviors {
@@ -343,19 +371,19 @@
 
         navigation {
             bindings = <
-        &none  &none  &none         &none      &none     &kp LC(W)             &kp LC(LS(TAB))  &kp LC(TAB)  &kp LC(T)              &kp LC(R)
-        &none  &none  &kp LEFT_ALT  &kp LCTRL  &none     &kp LEFT              &kp DOWN         &kp UP       &kp RIGHT              &kp LC(PLUS)
-&trans  &none  &none  &none         &none      &none     &kp LC(LEFT_BRACKET)  &kp LC(D)        &kp LC(U)    &kp LC(RIGHT_BRACKET)  &kp LC(MINUS)  &none
-                      &trans        &trans     &trans    &trans                &trans           &sl 4
+        &none  &none  &none         &none      &none     &kp LC(W)  &kp LC(LS(TAB))  &kp LC(TAB)  &kp LC(T)  &kp LC(R)
+        &none  &none  &kp LEFT_ALT  &kp LCTRL  &none     &kp LEFT   &kp DOWN         &kp UP       &kp RIGHT  &kp LC(PLUS)
+&trans  &none  &none  &none         &none      &none     &none      &kp LC(D)        &kp LC(U)    &none      &kp LC(MINUS)  &none
+                      &trans        &trans     &trans    &trans     &trans           &sl 4
             >;
         };
 
         extended_navigation {
             bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans    &trans        &trans        &trans      &trans         &trans
+        &trans  &trans  &trans  &trans  &trans    &kp LA(LEFT)  &kp LA(DOWN)  &kp LA(UP)  &kp LA(RIGHT)  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans        &trans        &trans      &trans         &trans  &trans
+                        &trans  &trans  &trans    &trans        &trans        &trans
             >;
         };
 
