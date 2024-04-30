@@ -313,18 +313,53 @@
             label = "DARK_READER";
         };
 
-        translate_selection: translate_text {
+        translate: translate_text {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LS(LC(N1))>;
             label = "TRANSLATE_TEXT";
         };
 
-        listen_selection: listen_selection {
+        listen: listen_selection {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LS(LC(N2))>;
             label = "LISTEN_SELECTION";
+        };
+
+        devtools: devtools {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp F12>;
+            label = "DEVTOOLS";
+        };
+
+        addrbar: addrbar {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp F6>;
+            label = "ADDRBAR";
+        };
+
+        last_tabs: last_tabs {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LS(T))>;
+            label = "LAST_TABS";
+        };
+
+        tab_start: tab_start {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LS(HOME))>;
+            label = "TAB_START";
+        };
+
+        reader_mode: reader_mode {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp>;
+            label = "READER_MODE";
         };
     };
 
@@ -381,8 +416,8 @@
         extended_navigation {
             bindings = <
         &trans  &trans  &trans  &trans  &trans    &trans        &trans        &trans      &trans         &trans
-        &trans  &trans  &trans  &trans  &trans    &kp LA(LEFT)  &kp LA(DOWN)  &kp LA(UP)  &kp LA(RIGHT)  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans        &trans        &trans      &trans         &trans  &trans
+        &trans  &trans  &trans  &trans  &trans    &kp LA(LEFT)  &kp LA(DOWN)  &kp LA(UP)  &kp LA(RIGHT)  &devtools
+&trans  &trans  &trans  &trans  &trans  &trans    &listen       &translate    &bitwarden  &dark_reader   &trans     &trans
                         &trans  &trans  &trans    &trans        &trans        &trans
             >;
         };
