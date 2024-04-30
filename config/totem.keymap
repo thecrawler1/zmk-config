@@ -345,8 +345,8 @@
             bindings = <
         &none  &none  &none         &none      &none     &kp LC(W)             &kp LC(LS(TAB))  &kp LC(TAB)  &kp LC(T)              &kp LC(R)
         &none  &none  &kp LEFT_ALT  &kp LCTRL  &none     &kp LEFT              &kp DOWN         &kp UP       &kp RIGHT              &kp LC(PLUS)
-&trans  &none  &none  &none         &none      &none     &kp LC(LEFT_BRACKET)  &kp LC(D)        &kp LC(U)    &kp LC(RIGHT_BRACKET)  &kp LC(MINUS)  &kp F6
-                      &trans        &trans     &trans    &trans                &trans           &trans
+&trans  &none  &none  &none         &none      &none     &kp LC(LEFT_BRACKET)  &kp LC(D)        &kp LC(U)    &kp LC(RIGHT_BRACKET)  &kp LC(MINUS)  &none
+                      &trans        &trans     &trans    &trans                &trans           &sl 4
             >;
         };
 
