@@ -406,18 +406,18 @@
 
         navigation {
             bindings = <
-        &none  &none  &none         &none      &none     &kp LC(W)  &kp LC(LS(TAB))  &kp LC(TAB)  &kp LC(T)  &kp LC(R)
-        &none  &none  &kp LEFT_ALT  &kp LCTRL  &none     &kp LEFT   &kp DOWN         &kp UP       &kp RIGHT  &kp LC(PLUS)
-&trans  &none  &none  &none         &none      &none     &none      &kp LC(D)        &kp LC(U)    &none      &kp LC(MINUS)  &none
-                      &trans        &trans     &trans    &trans     &trans           &sl 4
+        &none  &none  &none         &none      &none     &kp LC(W)   &kp LC(LS(TAB))  &kp LC(TAB)  &kp LC(T)  &kp LC(R)
+        &none  &none  &kp LEFT_ALT  &kp LCTRL  &none     &kp LEFT    &kp DOWN         &kp UP       &kp RIGHT  &kp LC(PLUS)
+&trans  &none  &none  &none         &none      &none     &last_tabs  &kp LC(D)        &kp LC(U)    &addrbar   &kp LC(MINUS)  &none
+                      &trans        &trans     &trans    &trans      &trans           &sl 4
             >;
         };
 
         extended_navigation {
             bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans        &tab_start    &last_tabs  &addrbar       &trans
-        &trans  &trans  &trans  &trans  &trans    &kp LA(LEFT)  &kp LA(DOWN)  &kp LA(UP)  &kp LA(RIGHT)  &devtools
-&trans  &trans  &trans  &trans  &trans  &trans    &listen       &translate    &bitwarden  &dark_reader   &reader_mode  &trans
+        &trans  &trans  &trans  &trans  &trans    &none         &none         &tab_start    &reader_mode   &none
+        &trans  &trans  &trans  &trans  &trans    &kp LA(LEFT)  &kp LA(DOWN)  &kp LA(UP)    &kp LA(RIGHT)  &devtools
+&trans  &trans  &trans  &trans  &trans  &trans    &none         &translate    &dark_reader  &translate     &listen    &none
                         &trans  &trans  &trans    &trans        &trans        &trans
             >;
         };
