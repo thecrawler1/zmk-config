@@ -405,7 +405,7 @@
             bindings = <
         &trans  &trans  &trans  &trans  &trans    &kp HOME      &kp PAGE_DOWN  &kp PAGE_UP   &kp END        &reader_mode
         &trans  &trans  &trans  &trans  &trans    &kp LA(LEFT)  &kp LA(DOWN)   &kp LA(UP)    &kp LA(RIGHT)  &devtools
-&trans  &trans  &trans  &trans  &trans  &trans    &tab_start    &translate     &dark_reader  &translate     &listen       &none
+&trans  &trans  &trans  &trans  &trans  &trans    &tab_start    &bitwarden     &dark_reader  &translate     &listen       &none
                         &trans  &trans  &trans    &trans        &trans         &trans
             >;
         };
