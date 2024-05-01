@@ -387,7 +387,7 @@
             bindings = <
         &kp GRAVE         &kp TILDE         &kp AMPERSAND   &kp EXCLAMATION       &kp PIPE     &none       &none                  &none            &none              &none
         &kp SINGLE_QUOTE  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp CARET    &kp DOLLAR  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp DOUBLE_QUOTES
-&trans  &none             &none             &kp HASH        &kp UNDER             &none        &none       &kp AT                 &kp PERCENT      &none              &kp BACKSLASH      &mo 5
+&trans  &none             &none             &kp HASH        &kp UNDER             &none        &none       &kp AT                 &kp PERCENT      &none              &kp BACKSLASH      &trans
                                             &trans          &trans                &trans       &trans      &trans                 &trans
             >;
         };
@@ -396,8 +396,8 @@
             bindings = <
         &none  &none  &none         &none      &none     &kp LC(W)   &kp LC(LS(TAB))  &kp LC(TAB)  &kp LC(T)  &kp LC(R)
         &none  &none  &kp LEFT_ALT  &kp LCTRL  &none     &kp LEFT    &kp DOWN         &kp UP       &kp RIGHT  &kp LC(PLUS)
-&trans  &none  &none  &none         &none      &none     &last_tabs  &kp LC(D)        &kp LC(U)    &addrbar   &kp LC(MINUS)  &none
-                      &trans        &trans     &trans    &trans      &trans           &sl 4
+&trans  &none  &none  &none         &none      &none     &last_tabs  &kp LC(D)        &kp LC(U)    &addrbar   &kp LC(MINUS)  &trans
+                      &mo 4         &trans     &trans    &trans      &trans           &trans
             >;
         };
 
@@ -405,7 +405,7 @@
             bindings = <
         &trans  &trans  &trans  &trans  &trans    &kp HOME      &kp PAGE_DOWN  &kp PAGE_UP   &kp END        &reader_mode
         &trans  &trans  &trans  &trans  &trans    &kp LA(LEFT)  &kp LA(DOWN)   &kp LA(UP)    &kp LA(RIGHT)  &devtools
-&trans  &trans  &trans  &trans  &trans  &trans    &tab_start    &bitwarden     &dark_reader  &translate     &listen       &none
+&trans  &trans  &trans  &trans  &trans  &trans    &tab_start    &bitwarden     &dark_reader  &translate     &listen       &trans
                         &trans  &trans  &trans    &trans        &trans         &trans
             >;
         };
@@ -414,8 +414,8 @@
             bindings = <
         &none         &kp K_MUTE       &kp C_VOLUME_DOWN   &kp C_VOLUME_UP  &none     &none   &none      &none         &none  &none
         &kp CAPSLOCK  &kp PRINTSCREEN  &kp DELETE          &kp BACKSPACE    &none     &none   &kp LCTRL  &kp LEFT_ALT  &none  &none
-&trans  &none         &none            &kp K_CONTEXT_MENU  &kp INSERT       &none     &none   &none      &none         &none  &none  &none
-                                       &sl 6               &trans           &trans    &trans  &trans     &trans
+&trans  &none         &none            &kp K_CONTEXT_MENU  &kp INSERT       &none     &none   &none      &none         &none  &none  &trans
+                                       &trans              &trans           &trans    &trans  &trans     &mo 6
             >;
         };
 
@@ -423,7 +423,7 @@
             bindings = <
         &none  &none  &none           &none              &none     &none   &none      &none         &none  &none
         &none  &none  &kp LC(DELETE)  &kp LC(BACKSPACE)  &none     &none   &kp LCTRL  &kp LEFT_ALT  &none  &none
-&trans  &none  &none  &none           &none              &none     &none   &none      &none         &none  &none  &none
+&trans  &none  &none  &none           &none              &none     &none   &none      &none         &none  &none  &trans
                       &trans          &trans             &trans    &trans  &trans     &trans
             >;
         };
@@ -433,7 +433,7 @@
         &a_acute       &trans    &e_acute       &trans  &trans    &trans  &u_acute  &i_acute  &o_acute       &trans
         &a_circumflex  &a_grave  &e_circumflex  &trans  &trans    &trans  &trans    &trans    &o_circumflex  &trans
 &trans  &a_tilde       &trans    &c_cedilla     &trans  &trans    &trans  &trans    &trans    &o_tilde       &trans  &trans
-                                 &trans         &trans  &trans    &to 8   &trans    &trans
+                                 &trans         &trans  &trans    &sl 8   &trans    &trans
             >;
         };
 
@@ -442,7 +442,7 @@
         &sa_acute       &trans     &se_acute       &trans  &trans    &trans  &su_acute  &si_acute  &so_acute       &trans
         &sa_circumflex  &sa_grave  &se_circumflex  &trans  &trans    &trans  &trans     &trans     &so_circumflex  &trans
 &trans  &sa_tilde       &trans     &sc_cedilla     &trans  &trans    &trans  &trans     &trans     &so_tilde       &trans  &trans
-                                   &trans          &trans  &trans    &to 7   &trans     &trans
+                                   &trans          &trans  &trans    &trans  &trans     &trans
             >;
         };
 
