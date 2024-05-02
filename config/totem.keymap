@@ -112,7 +112,7 @@
         };
 
         combo_accent_layer {
-            bindings = <&to 7>;
+            bindings = <&sl 7>;
             key-positions = <14 15>;
             layers = <0>;
         };
