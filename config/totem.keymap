@@ -72,19 +72,19 @@
         combo_esc {
             bindings = <&kp ESC>;
             key-positions = <27 28>;
-            layers = <0 1 2 3 4 5 7 8>;
+            layers = <0 1 2 3 4 5 7 8 6 9>;
         };
 
         combo_tab {
             bindings = <&kp TAB>;
             key-positions = <6 7>;
-            layers = <2 3 1 3 7 8 0 4 5 9>;
+            layers = <2 3 1 3 7 8 0 4 5 9 6>;
         };
 
         combo_ctrl_backspace {
             bindings = <&kp LC(BACKSPACE)>;
             key-positions = <28 29>;
-            layers = <2 3 1 3 7 8>;
+            layers = <2 3 1 3 7 8 0 4 5 6 9>;
         };
 
         combo_copy {
