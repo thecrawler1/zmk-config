@@ -367,10 +367,10 @@
 
         base {
             bindings = <
-            &kp Q  &kp W  &kp E  &kp R      &kp T            &kp Y           &kp U      &kp I      &kp O    &kp P
-            &kp A  &kp S  &kp D  &kp F      &kp G            &kp H           &kp J      &kp K      &kp L    &kp SEMI
-&mo_to 3 0  &kp Z  &kp X  &kp C  &kp V      &kp B            &kp N           &kp M      &kp COMMA  &kp DOT  &kp SLASH  &mo_to 5 1
-                          &sl 1  &kp SPACE  &sk LEFT_META    &sk LEFT_SHIFT  &kp ENTER  &sl 2
+            &kp Q  &kp W  &kp E         &kp R      &kp T    &kp Y  &kp U      &kp I           &kp O    &kp P
+            &kp A  &kp S  &kp D         &kp F      &kp G    &kp H  &kp J      &kp K           &kp L    &kp SEMI
+&mo_to 3 0  &kp Z  &kp X  &kp C         &kp V      &kp B    &kp N  &kp M      &kp COMMA       &kp DOT  &kp SLASH  &mo_to 5 1
+                          &sk LEFT_GUI  &kp SPACE  &sl 1    &sl 2  &kp ENTER  &sk LEFT_SHIFT
             >;
         };
 
@@ -394,10 +394,10 @@
 
         navigation {
             bindings = <
-        &none  &none  &none         &none      &none     &kp LC(W)   &kp LC(LS(TAB))  &kp LC(TAB)  &kp LC(T)  &kp LC(R)
-        &none  &none  &kp LEFT_ALT  &kp LCTRL  &none     &kp LEFT    &kp DOWN         &kp UP       &kp RIGHT  &kp LC(PLUS)
-&trans  &none  &none  &none         &none      &none     &last_tabs  &kp LC(D)        &kp LC(U)    &addrbar   &kp LC(MINUS)  &trans
-                      &mo 4         &trans     &trans    &trans      &trans           &trans
+        &none  &none  &none         &none      &none    &kp LC(W)   &kp LC(LS(TAB))  &kp LC(TAB)  &kp LC(T)  &kp LC(R)
+        &none  &none  &kp LEFT_ALT  &kp LCTRL  &none    &kp LEFT    &kp DOWN         &kp UP       &kp RIGHT  &kp LC(PLUS)
+&trans  &none  &none  &none         &none      &none    &last_tabs  &kp LC(D)        &kp LC(U)    &addrbar   &kp LC(MINUS)  &trans
+                      &trans        &trans     &mo 4    &trans      &trans           &trans
             >;
         };
 
@@ -412,10 +412,10 @@
 
         utils {
             bindings = <
-        &none         &kp K_MUTE       &kp C_VOLUME_DOWN   &kp C_VOLUME_UP  &none     &none   &none      &none         &none  &none
-        &kp CAPSLOCK  &kp PRINTSCREEN  &kp DELETE          &kp BACKSPACE    &none     &none   &kp LCTRL  &kp LEFT_ALT  &none  &none
-&trans  &none         &none            &kp K_CONTEXT_MENU  &kp INSERT       &none     &none   &none      &none         &none  &none  &trans
-                                       &trans              &trans           &trans    &trans  &trans     &mo 6
+        &none         &kp K_MUTE       &kp C_VOLUME_DOWN   &kp C_VOLUME_UP  &none     &none  &none      &none         &none  &none
+        &kp CAPSLOCK  &kp PRINTSCREEN  &kp DELETE          &kp BACKSPACE    &none     &none  &kp LCTRL  &kp LEFT_ALT  &none  &none
+&trans  &none         &none            &kp K_CONTEXT_MENU  &kp INSERT       &none     &none  &none      &none         &none  &none  &trans
+                                       &trans              &trans           &trans    &mo 6  &trans     &trans
             >;
         };
 
@@ -433,7 +433,7 @@
         &a_acute       &trans    &e_acute       &trans  &trans    &trans  &u_acute  &i_acute  &o_acute       &trans
         &a_circumflex  &a_grave  &e_circumflex  &trans  &trans    &trans  &trans    &trans    &o_circumflex  &trans
 &trans  &a_tilde       &trans    &c_cedilla     &trans  &trans    &trans  &trans    &trans    &o_tilde       &trans  &trans
-                                 &trans         &trans  &trans    &sl 8   &trans    &trans
+                                 &trans         &trans  &trans    &trans  &trans    &sl 8
             >;
         };
 
