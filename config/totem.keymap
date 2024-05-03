@@ -394,10 +394,10 @@
 
         navigation {
             bindings = <
-        &none  &none  &none         &none      &none    &kp LC(W)   &kp LC(LS(TAB))  &kp LC(TAB)  &kp LC(T)  &kp LC(R)
-        &none  &none  &kp LEFT_ALT  &kp LCTRL  &none    &kp LEFT    &kp DOWN         &kp UP       &kp RIGHT  &kp LC(PLUS)
-&trans  &none  &none  &none         &none      &none    &last_tabs  &kp LC(D)        &kp LC(U)    &addrbar   &kp LC(MINUS)  &trans
-                      &trans        &trans     &mo 4    &trans      &trans           &trans
+        &none  &none           &none         &none      &none    &kp LC(W)   &kp LC(LS(TAB))  &kp LC(TAB)  &kp LC(T)  &kp LC(R)
+        &none  &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LCTRL  &none    &kp LEFT    &kp DOWN         &kp UP       &kp RIGHT  &kp LC(PLUS)
+&trans  &none  &none           &none         &none      &none    &last_tabs  &kp LC(D)        &kp LC(U)    &addrbar   &kp LC(MINUS)  &trans
+                               &trans        &trans     &mo 4    &trans      &trans           &trans
             >;
         };
 
