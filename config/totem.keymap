@@ -36,85 +36,71 @@
         combo_lctrl {
             bindings = <&kp LEFT_CONTROL>;
             key-positions = <12 13>;
-            layers = <0>;
         };
 
         combo_rctrl {
             bindings = <&kp RIGHT_CONTROL>;
             key-positions = <16 17>;
-            layers = <0>;
         };
 
         combo_lalt {
             bindings = <&kp LEFT_ALT>;
             key-positions = <11 12>;
-            layers = <0>;
         };
 
         combo_ralt {
             bindings = <&kp RIGHT_ALT>;
             key-positions = <17 18>;
-            layers = <0>;
         };
 
         combo_lctrl_lalt {
             bindings = <&kp LC(LEFT_ALT)>;
             key-positions = <11 12 13>;
-            layers = <0>;
         };
 
         combo_rctrl_ralt {
             bindings = <&kp RC(RIGHT_ALT)>;
             key-positions = <16 17 18>;
-            layers = <0>;
         };
 
         combo_esc {
             bindings = <&kp ESC>;
             key-positions = <27 28>;
-            layers = <0 1 2 3 4 5 7 8 6 9>;
         };
 
         combo_tab {
             bindings = <&kp TAB>;
             key-positions = <6 7>;
-            layers = <2 3 1 3 7 8 0 4 5 9 6>;
         };
 
         combo_ctrl_backspace {
             bindings = <&kp LC(BACKSPACE)>;
             key-positions = <28 29>;
-            layers = <2 3 1 3 7 8 0 4 5 6 9>;
         };
 
         combo_copy {
             bindings = <&kp LC(C)>;
             key-positions = <22 23>;
-            layers = <0 1 2 3 4 5 6 7 8>;
         };
 
         combo_paste {
             bindings = <&kp LC(V)>;
             key-positions = <23 24>;
-            layers = <2 1 3 3 7 8 0 4 5 6>;
         };
 
         combo_game_layer {
-            bindings = <&to 9>;
+            bindings = <&to 0>;
             key-positions = <19 30 31>;
-            layers = <0>;
         };
 
         combo_cut {
             bindings = <&kp LC(X)>;
             key-positions = <23 24 22>;
-            layers = <2 1 3 3 7 8 0 4 5 6>;
         };
 
         combo_accent_layer {
-            bindings = <&sl 7>;
+            bindings = <&sl 0>;
             key-positions = <14 15>;
-            layers = <0>;
         };
     };
 
@@ -365,93 +351,12 @@
     keymap {
         compatible = "zmk,keymap";
 
-        base {
+        insert {
             bindings = <
-            &kp Q  &kp W  &kp E         &kp R      &kp T    &kp Y  &kp U      &kp I           &kp O    &kp P
-            &kp A  &kp S  &kp D         &kp F      &kp G    &kp H  &kp J      &kp K           &kp L    &kp SEMI
-&mo_to 3 0  &kp Z  &kp X  &kp C         &kp V      &kp B    &kp N  &kp M      &kp COMMA       &kp DOT  &kp SLASH  &mo_to 5 1
-                          &sk LEFT_GUI  &kp SPACE  &sl 1    &sl 2  &kp ENTER  &sk LEFT_SHIFT
-            >;
-        };
-
-        numbers {
-            bindings = <
-        &kp F1   &kp F2   &kp F3    &kp F4     &kp F5    &kp F6     &kp F7        &kp F8     &kp F9   &kp F10
-        &kp N1   &kp N2   &kp N3    &kp N4     &kp N5    &kp N6     &kp N7        &kp N8     &kp N9   &kp N0
-&trans  &kp F11  &kp F12  &kp PLUS  &kp MINUS  &none     &kp EQUAL  &kp ASTERISK  &kp COMMA  &kp DOT  &kp SLASH  &mo_to 5 3
-                          &trans    &trans     &trans    &trans     &trans        &trans
-            >;
-        };
-
-        symbols {
-            bindings = <
-        &kp GRAVE         &kp TILDE         &kp AMPERSAND   &kp EXCLAMATION       &kp PIPE     &none       &none                  &none            &none              &none
-        &kp SINGLE_QUOTE  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp CARET    &kp DOLLAR  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp DOUBLE_QUOTES
-&trans  &none             &none             &kp HASH        &kp UNDER             &none        &none       &kp AT                 &kp PERCENT      &none              &kp BACKSLASH      &trans
-                                            &trans          &trans                &trans       &trans      &trans                 &trans
-            >;
-        };
-
-        navigation {
-            bindings = <
-        &none  &none           &none         &none      &none    &kp LC(W)   &kp LC(LS(TAB))  &kp LC(TAB)  &kp LC(T)  &kp LC(R)
-        &none  &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LCTRL  &none    &kp LEFT    &kp DOWN         &kp UP       &kp RIGHT  &kp LC(PLUS)
-&trans  &none  &none           &none         &none      &none    &last_tabs  &kp LC(D)        &kp LC(U)    &addrbar   &kp LC(MINUS)  &trans
-                               &trans        &trans     &mo 4    &trans      &trans           &trans
-            >;
-        };
-
-        extended_navigation {
-            bindings = <
-        &trans  &trans  &trans        &trans            &trans    &kp HOME      &kp PAGE_DOWN  &kp PAGE_UP   &kp END        &reader_mode
-        &trans  &trans  &kp LEFT_ALT  &kp LEFT_CONTROL  &trans    &kp LA(LEFT)  &kp LA(DOWN)   &kp LA(UP)    &kp LA(RIGHT)  &devtools
-&trans  &trans  &trans  &trans        &trans            &trans    &tab_start    &bitwarden     &dark_reader  &translate     &listen       &trans
-                        &trans        &trans            &trans    &trans        &trans         &trans
-            >;
-        };
-
-        utils {
-            bindings = <
-        &none         &kp K_MUTE       &kp C_VOLUME_DOWN   &kp C_VOLUME_UP  &none     &none  &none      &none         &none  &none
-        &kp CAPSLOCK  &kp PRINTSCREEN  &kp DELETE          &kp BACKSPACE    &none     &none  &kp LCTRL  &kp LEFT_ALT  &none  &none
-&trans  &none         &none            &kp K_CONTEXT_MENU  &kp INSERT       &none     &none  &none      &none         &none  &none  &trans
-                                       &trans              &trans           &trans    &mo 6  &trans     &trans
-            >;
-        };
-
-        extended_utils {
-            bindings = <
-        &none  &none  &none           &none              &none     &none   &none      &none         &none  &none
-        &none  &none  &kp LC(DELETE)  &kp LC(BACKSPACE)  &none     &none   &kp LCTRL  &kp LEFT_ALT  &none  &none
-&trans  &none  &none  &none           &none              &none     &none   &none      &none         &none  &none  &trans
-                      &trans          &trans             &trans    &trans  &trans     &trans
-            >;
-        };
-
-        lowercase_accents {
-            bindings = <
-        &a_acute       &trans    &e_acute       &trans  &trans    &trans  &u_acute  &i_acute  &o_acute       &trans
-        &a_circumflex  &a_grave  &e_circumflex  &trans  &trans    &trans  &trans    &trans    &o_circumflex  &trans
-&trans  &a_tilde       &trans    &c_cedilla     &trans  &trans    &trans  &trans    &trans    &o_tilde       &trans  &trans
-                                 &trans         &trans  &trans    &trans  &trans    &sl 8
-            >;
-        };
-
-        uppercase_accents {
-            bindings = <
-        &sa_acute       &trans     &se_acute       &trans  &trans    &trans  &su_acute  &si_acute  &so_acute       &trans
-        &sa_circumflex  &sa_grave  &se_circumflex  &trans  &trans    &trans  &trans     &trans     &so_circumflex  &trans
-&trans  &sa_tilde       &trans     &sc_cedilla     &trans  &trans    &trans  &trans     &trans     &so_tilde       &trans  &trans
-                                   &trans          &trans  &trans    &trans  &trans     &trans
-            >;
-        };
-
-        game {
-            bindings = <
-        &trans  &trans  &trans   &trans  &trans            &trans         &trans  &trans  &trans  &trans
-        &trans  &trans  &trans   &trans  &trans            &trans         &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans   &trans  &trans            &trans         &trans  &trans  &trans  &trans  &trans
-                        &kp ESC  &trans  &kp LEFT_SHIFT    &kp LEFT_META  &trans  &trans
+       &kp Q        &kp W        &kp E       &kp R       &kp T     &kp Y   &kp U       &kp I       &kp O        &kp P
+       &mt LCTRL A  &mt LSHFT S  &mt LALT D  &mt LGUI F  &kp G     &kp H   &mt RGUI J  &mt LALT K  &mt RSHFT L  &mt RCTRL SEMI
+&none  &kp Z        &kp X        &kp C       &kp V       &kp B     &kp N   &kp M       &kp COMMA   &kp DOT      &kp FSLH        &trans
+                                 &trans      &trans      &trans    &trans  &trans      &trans
             >;
         };
     };
