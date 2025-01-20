@@ -367,10 +367,10 @@
 
         base {
             bindings = <
-            &kp Q  &kp W  &kp E         &kp R      &kp T    &kp Y  &kp U      &kp I           &kp O    &kp P
-            &kp A  &kp S  &kp D         &kp F      &kp G    &kp H  &kp J      &kp K           &kp L    &kp SEMI
-&mo_to 3 0  &kp Z  &kp X  &kp C         &kp V      &kp B    &kp N  &kp M      &kp COMMA       &kp DOT  &kp SLASH  &mo_to 5 1
-                          &sk LEFT_GUI  &kp SPACE  &sl 1    &sl 2  &kp ENTER  &sk LEFT_SHIFT
+       &kp Q  &kp W  &kp E         &kp R      &kp T    &kp Y  &kp U      &kp I           &kp O    &kp P
+       &kp A  &kp S  &kp D         &kp F      &kp G    &kp H  &kp J      &kp K           &kp L    &kp SEMI
+&mo 3  &kp Z  &kp X  &kp C         &kp V      &kp B    &kp N  &kp M      &kp COMMA       &kp DOT  &kp SLASH  &mo 5
+                     &sk LEFT_GUI  &kp SPACE  &sl 1    &sl 2  &kp ENTER  &sk LEFT_SHIFT
             >;
         };
 
