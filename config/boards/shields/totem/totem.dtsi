@@ -31,7 +31,7 @@
 
     kscan0: kscan_0 {
         compatible = "zmk,kscan-gpio-matrix";
-        label = "KSCAN";
+        zephyr,user = "KSCAN_MATRIX";
         
         diode-direction = "col2row"; 
         row-gpios
