@@ -7,7 +7,6 @@
 #include "totem.dtsi"
 
 &kscan0 {
-    zephyr,user = "KSCAN_MATRIX";
     col-gpios
         = <&xiao_d 4 GPIO_ACTIVE_HIGH>
         , <&xiao_d 5 GPIO_ACTIVE_HIGH>

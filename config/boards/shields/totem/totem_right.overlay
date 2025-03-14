@@ -11,7 +11,6 @@
 };
 
 &kscan0 {
-    zephyr,user = "KSCAN_MATRIX";
     col-gpios
         = <&xiao_d 8 GPIO_ACTIVE_HIGH>
         , <&xiao_d 9 GPIO_ACTIVE_HIGH>
