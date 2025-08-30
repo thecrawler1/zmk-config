@@ -317,7 +317,7 @@
         &kp F1            &kp F2              &kp F3                &kp F4            &kp F5       &kp F6     &kp F7             &kp F8                 &kp F9               &kp F10
         &hml LEFT_ALT N1  &hml LEFT_SHIFT N2  &hml LEFT_CONTROL N3  &hml LEFT_GUI N4  &kp N5       &kp N6     &hmr RIGHT_GUI N7  &hmr RIGHT_CONTROL N8  &hmr RIGHT_SHIFT N9  &hmr LEFT_ALT N0
 &trans  &kp F11           &kp F12             &kp PLUS              &kp MINUS         &kp SPACE    &kp EQUAL  &kp ASTERISK       &kp COMMA              &kp DOT              &kp SLASH         &trans
-                                              &trans                &trans            &trans       &trans     &trans             &trans
+                                              &none                 &none             &none        &none      &none              &none
             >;
         };
 
@@ -326,7 +326,7 @@
         &kp GRAVE         &kp TILDE          &kp AMPERSAND    &kp EXCLAMATION        &kp PIPE     &none       &none        &none          &none             &none
         &kp SINGLE_QUOTE  &kp LEFT_BRACKET   &kp LEFT_BRACE   &kp LEFT_PARENTHESIS   &kp CARET    &kp DOLLAR  &kp AT       &kp HASH       &kp UNDERSCORE    &kp DOUBLE_QUOTES
 &trans  &none             &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp RIGHT_PARENTHESIS  &none        &none       &kp PERCENT  &kp LESS_THAN  &kp GREATER_THAN  &kp BACKSLASH      &trans
-                                             &trans           &trans                 &trans       &trans      &trans       &trans
+                                             &none            &none                  &none        &none       &none        &none
             >;
         };
 
