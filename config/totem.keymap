@@ -332,10 +332,10 @@
 
         new {
             bindings = <
-       &none  &none  &none  &none  &none    &none     &none                &none                  &none                   &none
-       &none  &none  &none  &none  &none    &kp LEFT  &hmr RIGHT_GUI DOWN  &hmr RIGHT_CONTROL UP  &hmr RIGHT_SHIFT RIGHT  &none
-&none  &none  &none  &none  &none  &none    &none     &none                &none                  &none                   &none  &none
-                     &none  &none  &none    &none     &none                &none
+       &none  &none  &none  &none  &none        &none     &none                &none                  &none                   &none
+       &none  &none  &none  &none  &none        &kp LEFT  &hmr RIGHT_GUI DOWN  &hmr RIGHT_CONTROL UP  &hmr RIGHT_SHIFT RIGHT  &none
+&none  &none  &none  &none  &none  &kp SPACE    &none     &none                &none                  &none                   &none  &none
+                     &none  &none  &none        &none     &none                &none
             >;
         };
 
