@@ -311,19 +311,19 @@
 
         symbols {
             bindings = <
-       &none                       &none                         &none                         &none                           &none        &kp PIPE    &kp EXCLAMATION    &kp AMPERSAND            &kp TILDE                    &kp GRAVE
-       &hml LEFT_ALT SINGLE_QUOTE  &hml LEFT_SHIFT LEFT_BRACKET  &hml LEFT_CONTROL LEFT_BRACE  &hml LEFT_GUI LEFT_PARENTHESIS  &kp CARET    &kp DOLLAR  &hmr RIGHT_GUI AT  &hmr RIGHT_CONTROL HASH  &hmr RIGHT_SHIFT UNDERSCORE  &hmr LEFT_ALT DOUBLE_QUOTES
-&none  &none                       &kp RIGHT_BRACKET             &kp RIGHT_BRACE               &kp RIGHT_PARENTHESIS           &kp SPACE    &none       &kp PERCENT        &kp LESS_THAN            &kp GREATER_THAN             &kp BACKSLASH                &none
+       &none                       &none                         &none                         &none                           &none        &none       &none              &none                    &kp TILDE               &none
+       &hml LEFT_ALT SINGLE_QUOTE  &hml LEFT_SHIFT LEFT_BRACKET  &hml LEFT_CONTROL LEFT_BRACE  &hml LEFT_GUI LEFT_PARENTHESIS  &kp CARET    &kp DOLLAR  &hmr RIGHT_GUI AT  &hmr RIGHT_CONTROL HASH  &hmr RIGHT_SHIFT GRAVE  &hmr LEFT_ALT DOUBLE_QUOTES
+&none  &none                       &kp RIGHT_BRACKET             &kp RIGHT_BRACE               &kp RIGHT_PARENTHESIS           &kp SPACE    &none       &none              &none                    &none                   &kp BACKSLASH                &none
                                                                  &none                         &none                           &none        &kp K_MENU  &kp ENTER          &kp ESCAPE
             >;
         };
 
         new {
             bindings = <
-       &none  &none  &none  &none  &none        &kp HOME       &kp PAGE_DOWN        &kp PAGE_UP            &kp END                 &none
-       &none  &none  &none  &none  &none        &kp LEFT       &hmr RIGHT_GUI DOWN  &hmr RIGHT_CONTROL UP  &hmr RIGHT_SHIFT RIGHT  &none
-&none  &none  &none  &none  &none  &kp SPACE    &none          &none                &none                  &none                   &none  &none
-                     &none  &none  &none        &kp BACKSPACE  &kp ENTER            &kp DELETE
+       &none          &none            &none     &none           &none        &kp HOME       &kp PAGE_DOWN        &kp PAGE_UP            &kp END                 &none
+       &kp AMPERSAND  &kp EXCLAMATION  &kp HASH  &kp AT          &kp PIPE     &kp LEFT       &hmr RIGHT_GUI DOWN  &hmr RIGHT_CONTROL UP  &hmr RIGHT_SHIFT RIGHT  &hmr LEFT_ALT PERCENT
+&none  &none          &none            &none     &kp UNDERSCORE  &kp SPACE    &none          &none                &none                  &none                   &none                  &none
+                                       &none     &none           &none        &kp BACKSPACE  &kp ENTER            &kp DELETE
             >;
         };
 
