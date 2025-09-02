@@ -29,18 +29,6 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_esc {
-            bindings = <&kp ESC>;
-            key-positions = <27 28>;
-            layers = <0 1 2 4 5 6 7>;
-        };
-
-        combo_tab {
-            bindings = <&kp TAB>;
-            key-positions = <6 7>;
-            layers = <2 4 1 4 6 7 0 5>;
-        };
-
         combo_ctrl_backspace {
             bindings = <&kp LC(BACKSPACE)>;
             key-positions = <28 29>;
@@ -341,10 +329,10 @@
 
         navigation {
             bindings = <
-        &none  &none  &none  &none  &none    &none       &kp LC(PLUS)     &kp LC(MINUS)  &none     &none
-        &none  &none  &none  &none  &none    &none       &kp LC(LS(TAB))  &kp LC(TAB)    &none     &none
-&trans  &none  &none  &none  &none  &none    &last_tabs  &kp LC(D)        &kp LC(U)      &addrbar  &none  &trans
-                      &none  &none  &none    &none       &none            &none
+       &none  &none  &none  &none  &none    &none              &kp LC(PLUS)     &kp LC(MINUS)   &none     &none
+       &none  &none  &none  &none  &none    &none              &kp LC(LS(TAB))  &kp LC(TAB)     &none     &none
+&none  &none  &none  &none  &none  &none    &last_tabs         &kp LC(D)        &kp LC(U)       &addrbar  &none  &none
+                     &none  &none  &none    &kp LC(BACKSPACE)  &none            &kp LC(DELETE)
             >;
         };
 
