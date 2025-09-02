@@ -29,12 +29,6 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_ctrl_backspace {
-            bindings = <&kp LC(BACKSPACE)>;
-            key-positions = <28 29>;
-            layers = <2 4 1 4 6 7 0 5>;
-        };
-
         combo_copy {
             bindings = <&kp LC(C)>;
             key-positions = <22 23>;
@@ -320,10 +314,10 @@
 
         new {
             bindings = <
-       &none          &none            &none     &none           &none        &kp HOME       &kp PAGE_DOWN        &kp PAGE_UP            &kp END                 &none
-       &kp AMPERSAND  &kp EXCLAMATION  &kp HASH  &kp AT          &kp PIPE     &kp LEFT       &hmr RIGHT_GUI DOWN  &hmr RIGHT_CONTROL UP  &hmr RIGHT_SHIFT RIGHT  &kp LEFT_ALT
-&none  &none          &none            &none     &kp UNDERSCORE  &kp SPACE    &none          &none                &none                  &none                   &none         &none
-                                       &none     &none           &none        &kp BACKSPACE  &kp ENTER            &kp DELETE
+       &none                    &none                        &none                   &none             &none        &kp HOME       &kp PAGE_DOWN        &kp PAGE_UP            &kp END                 &none
+       &hml LEFT_ALT AMPERSAND  &hml LEFT_SHIFT EXCLAMATION  &hml LEFT_CONTROL HASH  &hml LEFT_GUI AT  &kp PIPE     &kp LEFT       &hmr RIGHT_GUI DOWN  &hmr RIGHT_CONTROL UP  &hmr RIGHT_SHIFT RIGHT  &kp LEFT_ALT
+&none  &none                    &none                        &none                   &kp UNDERSCORE    &kp SPACE    &none          &none                &none                  &none                   &none         &none
+                                                             &none                   &none             &none        &kp BACKSPACE  &kp ENTER            &kp DELETE
             >;
         };
 
@@ -338,10 +332,10 @@
 
         utils {
             bindings = <
-       &none         &kp K_MUTE       &kp C_VOLUME_DOWN   &kp C_VOLUME_UP  &none    &none  &none      &none         &none  &none
-       &kp CAPSLOCK  &kp PRINTSCREEN  &none               &none            &none    &none  &kp LCTRL  &kp LEFT_ALT  &none  &none
-&none  &none         &none            &kp K_CONTEXT_MENU  &kp INSERT       &none    &none  &none      &none         &none  &none  &none
-                                      &none               &none            &none    &none  &none      &none
+       &none         &kp K_MUTE       &kp C_VOLUME_DOWN   &kp C_VOLUME_UP  &none    &none  &none  &none  &none  &none
+       &kp CAPSLOCK  &kp PRINTSCREEN  &none               &none            &none    &none  &none  &none  &none  &none
+&none  &none         &none            &kp K_CONTEXT_MENU  &kp INSERT       &none    &none  &none  &none  &none  &none  &none
+                                      &none               &none            &none    &none  &none  &none
             >;
         };
 
