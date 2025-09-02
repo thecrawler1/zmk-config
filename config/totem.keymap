@@ -32,41 +32,41 @@
         combo_esc {
             bindings = <&kp ESC>;
             key-positions = <27 28>;
-            layers = <0 1 2 4 5 6 8 9 7>;
+            layers = <0 1 2 4 5 6 7>;
         };
 
         combo_tab {
             bindings = <&kp TAB>;
             key-positions = <6 7>;
-            layers = <2 4 1 4 8 9 0 5 6 7>;
+            layers = <2 4 1 4 6 7 0 5>;
         };
 
         combo_ctrl_backspace {
             bindings = <&kp LC(BACKSPACE)>;
             key-positions = <28 29>;
-            layers = <2 4 1 4 8 9 0 5 6 7>;
+            layers = <2 4 1 4 6 7 0 5>;
         };
 
         combo_copy {
             bindings = <&kp LC(C)>;
             key-positions = <22 23>;
-            layers = <0 1 2 4 5 6 7 8 9>;
+            layers = <0 1 2 4 5 6 7>;
         };
 
         combo_paste {
             bindings = <&kp LC(V)>;
             key-positions = <23 24>;
-            layers = <2 1 4 4 8 9 0 5 6 7>;
+            layers = <2 1 4 4 6 7 0 5>;
         };
 
         combo_cut {
             bindings = <&kp LC(X)>;
             key-positions = <23 24 22>;
-            layers = <2 1 4 4 8 9 0 5 6 7>;
+            layers = <2 1 4 4 6 7 0 5>;
         };
 
         combo_accent_layer {
-            bindings = <&sl 8>;
+            bindings = <&sl 6>;
             key-positions = <14 15>;
             layers = <0>;
         };
@@ -307,7 +307,7 @@
             bindings = <
        &kp Q            &kp W              &kp E                &kp R            &kp T    &kp Y  &kp U             &kp I                 &kp O               &kp P
        &hml LEFT_ALT A  &hml LEFT_SHIFT S  &hml LEFT_CONTROL D  &hml LEFT_GUI F  &kp G    &kp H  &hmr RIGHT_GUI J  &hmr RIGHT_CONTROL K  &hmr RIGHT_SHIFT L  &hmr LEFT_ALT SEMI
-&mo 4  &kp Z            &kp X              &kp C                &kp V            &kp B    &kp N  &kp M             &kp COMMA             &kp DOT             &kp SLASH           &mo 6
+&mo 4  &kp Z            &kp X              &kp C                &kp V            &kp B    &kp N  &kp M             &kp COMMA             &kp DOT             &kp SLASH           &mo 5
                                            &mo 3                &kp SPACE        &mo 2    &mo 1  &kp ENTER         &kp LEFT_SHIFT
             >;
         };
@@ -348,48 +348,30 @@
             >;
         };
 
-        extended_navigation {
-            bindings = <
-        &trans  &trans  &trans        &trans            &trans    &kp HOME      &kp PAGE_DOWN  &kp PAGE_UP   &kp END        &reader_mode
-        &trans  &trans  &kp LEFT_ALT  &kp LEFT_CONTROL  &trans    &kp LA(LEFT)  &kp LA(DOWN)   &kp LA(UP)    &kp LA(RIGHT)  &devtools
-&trans  &trans  &trans  &trans        &trans            &trans    &tab_start    &bitwarden     &dark_reader  &translate     &listen       &trans
-                        &trans        &trans            &trans    &trans        &trans         &trans
-            >;
-        };
-
         utils {
             bindings = <
-        &none         &kp K_MUTE       &kp C_VOLUME_DOWN   &kp C_VOLUME_UP  &none     &none  &none      &none         &none  &none
-        &kp CAPSLOCK  &kp PRINTSCREEN  &kp DELETE          &kp BACKSPACE    &none     &none  &kp LCTRL  &kp LEFT_ALT  &none  &none
-&trans  &none         &none            &kp K_CONTEXT_MENU  &kp INSERT       &none     &none  &none      &none         &none  &none  &trans
-                                       &trans              &trans           &trans    &mo 7  &trans     &trans
-            >;
-        };
-
-        extended_utils {
-            bindings = <
-        &none  &none  &none           &none              &none     &none   &none      &none         &none  &none
-        &none  &none  &kp LC(DELETE)  &kp LC(BACKSPACE)  &none     &none   &kp LCTRL  &kp LEFT_ALT  &none  &none
-&trans  &none  &none  &none           &none              &none     &none   &none      &none         &none  &none  &trans
-                      &trans          &trans             &trans    &trans  &trans     &trans
+       &none         &kp K_MUTE       &kp C_VOLUME_DOWN   &kp C_VOLUME_UP  &none    &none  &none      &none         &none  &none
+       &kp CAPSLOCK  &kp PRINTSCREEN  &none               &none            &none    &none  &kp LCTRL  &kp LEFT_ALT  &none  &none
+&none  &none         &none            &kp K_CONTEXT_MENU  &kp INSERT       &none    &none  &none      &none         &none  &none  &none
+                                      &none               &none            &none    &none  &none      &none
             >;
         };
 
         lowercase_accents {
             bindings = <
-        &a_acute       &trans    &e_acute       &trans  &trans    &trans  &u_acute  &i_acute  &o_acute       &trans
-        &a_circumflex  &a_grave  &e_circumflex  &trans  &trans    &trans  &trans    &trans    &o_circumflex  &trans
-&trans  &a_tilde       &trans    &c_cedilla     &trans  &trans    &trans  &trans    &trans    &o_tilde       &trans  &trans
-                                 &trans         &trans  &trans    &trans  &trans    &sl 9
+       &a_acute       &none     &e_acute       &none  &none    &none  &u_acute  &i_acute  &o_acute       &none
+       &a_circumflex  &a_grave  &e_circumflex  &none  &none    &none  &none     &none     &o_circumflex  &none
+&none  &a_tilde       &none     &c_cedilla     &none  &none    &none  &none     &none     &o_tilde       &none  &none
+                                &none          &none  &none    &none  &none     &sl 7
             >;
         };
 
         uppercase_accents {
             bindings = <
-        &sa_acute       &trans     &se_acute       &trans  &trans    &trans  &su_acute  &si_acute  &so_acute       &trans
-        &sa_circumflex  &sa_grave  &se_circumflex  &trans  &trans    &trans  &trans     &trans     &so_circumflex  &trans
-&trans  &sa_tilde       &trans     &sc_cedilla     &trans  &trans    &trans  &trans     &trans     &so_tilde       &trans  &trans
-                                   &trans          &trans  &trans    &trans  &trans     &trans
+       &sa_acute       &none      &se_acute       &none  &none    &none  &su_acute  &si_acute  &so_acute       &none
+       &sa_circumflex  &sa_grave  &se_circumflex  &none  &none    &none  &none      &none      &so_circumflex  &none
+&none  &sa_tilde       &none      &sc_cedilla     &none  &none    &none  &none      &none      &so_tilde       &none  &none
+                                  &none           &none  &none    &none  &none      &none
             >;
         };
     };
