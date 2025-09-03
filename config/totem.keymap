@@ -305,19 +305,19 @@
 
         symbols {
             bindings = <
-       &none                       &none                  &none                    &none                  &none        &none       &none                            &none                          &none                          &none
-       &hml LEFT_ALT SINGLE_QUOTE  &hml LEFT_SHIFT GRAVE  &hml LEFT_CONTROL TILDE  &hml LEFT_GUI PERCENT  &kp CARET    &kp DOLLAR  &hmr RIGHT_GUI LEFT_PARENTHESIS  &hmr RIGHT_CONTROL LEFT_BRACE  &hmr RIGHT_SHIFT LEFT_BRACKET  &hmr LEFT_ALT DOUBLE_QUOTES
-&none  &none                       &none                  &none                    &none                  &kp SPACE    &none       &kp RIGHT_PARENTHESIS            &kp RIGHT_BRACE                &kp RIGHT_BRACKET              &kp BACKSLASH                &none
-                                                          &none                    &none                  &none        &kp ESCAPE  &kp ENTER                        &kp K_MENU
+       &none                       &none                  &none                    &none             &none        &none       &none                            &none                          &none                          &none
+       &hml LEFT_ALT SINGLE_QUOTE  &hml LEFT_SHIFT GRAVE  &hml LEFT_CONTROL TILDE  &hml LEFT_GUI AT  &kp CARET    &kp DOLLAR  &hmr RIGHT_GUI LEFT_PARENTHESIS  &hmr RIGHT_CONTROL LEFT_BRACE  &hmr RIGHT_SHIFT LEFT_BRACKET  &hmr LEFT_ALT DOUBLE_QUOTES
+&none  &none                       &none                  &none                    &none             &kp SPACE    &none       &kp RIGHT_PARENTHESIS            &kp RIGHT_BRACE                &kp RIGHT_BRACKET              &kp BACKSLASH                &none
+                                                          &none                    &none             &none        &kp ESCAPE  &kp ENTER                        &kp K_MENU
             >;
         };
 
         new {
             bindings = <
-       &none                    &none                        &none                   &none             &none        &kp HOME       &kp PAGE_DOWN        &kp PAGE_UP            &kp END                 &none
-       &hml LEFT_ALT AMPERSAND  &hml LEFT_SHIFT EXCLAMATION  &hml LEFT_CONTROL HASH  &hml LEFT_GUI AT  &kp PIPE     &kp LEFT       &hmr RIGHT_GUI DOWN  &hmr RIGHT_CONTROL UP  &hmr RIGHT_SHIFT RIGHT  &kp LEFT_ALT
-&none  &none                    &none                        &none                   &kp UNDERSCORE    &kp SPACE    &none          &none                &none                  &none                   &none         &none
-                                                             &none                   &none             &none        &kp BACKSPACE  &kp ENTER            &kp DELETE
+       &none                    &none                        &none                      &none               &none        &kp HOME       &kp PAGE_DOWN        &kp PAGE_UP            &kp END                 &none
+       &hml LEFT_ALT AMPERSAND  &hml LEFT_SHIFT EXCLAMATION  &hml LEFT_CONTROL PERCENT  &hml LEFT_GUI HASH  &kp PIPE     &kp LEFT       &hmr RIGHT_GUI DOWN  &hmr RIGHT_CONTROL UP  &hmr RIGHT_SHIFT RIGHT  &kp LEFT_ALT
+&none  &none                    &none                        &none                      &kp UNDERSCORE      &kp SPACE    &none          &none                &none                  &none                   &none         &none
+                                                             &none                      &none               &none        &kp BACKSPACE  &kp ENTER            &kp DELETE
             >;
         };
 
