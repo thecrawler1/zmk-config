@@ -290,7 +290,7 @@
        &kp Q            &kp W              &kp E                &kp R            &kp T    &kp Y  &kp U             &kp I                 &kp O               &kp P
        &hml LEFT_ALT A  &hml LEFT_SHIFT S  &hml LEFT_CONTROL D  &hml LEFT_GUI F  &kp G    &kp H  &hmr RIGHT_GUI J  &hmr RIGHT_CONTROL K  &hmr RIGHT_SHIFT L  &hmr LEFT_ALT SEMI
 &mo 4  &kp Z            &kp X              &kp C                &kp V            &kp B    &kp N  &kp M             &kp COMMA             &kp DOT             &kp SLASH           &mo 5
-                                           &mo 3                &kp SPACE        &mo 2    &mo 1  &kp ENTER         &sk LEFT_SHIFT
+                                           &mo 3                &kp SPACE        &mo 2    &mo 1  &kp ENTER         &kp LEFT_SHIFT
             >;
         };
 
@@ -299,7 +299,7 @@
        &kp F1            &kp F2              &kp F3                &kp F4            &kp F5       &kp F6     &kp F7             &kp F8                 &kp F9               &kp F10
        &hml LEFT_ALT N1  &hml LEFT_SHIFT N2  &hml LEFT_CONTROL N3  &hml LEFT_GUI N4  &kp N5       &kp N6     &hmr RIGHT_GUI N7  &hmr RIGHT_CONTROL N8  &hmr RIGHT_SHIFT N9  &hmr LEFT_ALT N0
 &none  &kp F11           &kp F12             &kp PLUS              &kp MINUS         &kp EQUAL    &kp ENTER  &kp ASTERISK       &kp COMMA              &kp DOT              &kp SLASH         &none
-                                             &sk LEFT_GUI          &kp SPACE         &kp TAB      &none      &none              &none
+                                             &kp LEFT_GUI          &kp SPACE         &kp TAB      &none      &none              &none
             >;
         };
 
