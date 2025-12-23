@@ -13,18 +13,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
-#define BASE        0
-#define LMD         1
-#define RMD         2
-#define SYM         3
-#define NUM         4
-#define ARW         5
-#define Media       6
-#define Fun         7
-#define Button      8
-#define Game        9
-#define Gameplus    10
-
 &sk { quick-release; };
 
 / {
