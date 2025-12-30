@@ -14,10 +14,10 @@ fi
 PART="$1"
 UF2_FILE="firmware/totem_${PART}-xiao_ble-zmk.uf2"
 
-# Unzip firmware.zip if exists
+# Unzip firmware.zip if exists (auto-confirm overwrite)
 if [ -f firmware.zip ]; then
     echo "Unzipping firmware.zip..."
-    unzip -q firmware.zip -d firmware/
+    unzip -o -q firmware.zip -d firmware/
 fi
 
 # Check if UF2 file exists
@@ -35,7 +35,7 @@ read
 # Wait for device (timeout after 30 attempts)
 echo "Waiting for Seeeduino XIAO (/dev/sda)..."
 ATTEMPTS=0
-while ! fdisk -l | grep -q "Disk /dev/sda"; do
+while ! sudo fdisk -l | grep -q "Disk /dev/sda"; do
     if [ $ATTEMPTS -ge 30 ]; then
         echo "Error: Device not detected within 30 seconds. Check USB connection and bootloader entry."
         exit 1
@@ -51,7 +51,7 @@ mkdir -p /mnt/xiao
 
 # Mount
 echo "Mounting..."
-mount /dev/sda /mnt/xiao
+sudo mount /dev/sda /mnt/xiao
 
 # Copy UF2
 echo "Flashing $UF2_FILE..."
@@ -62,6 +62,6 @@ sync
 
 # Umount
 echo "Unmounting..."
-umount /mnt/xiao
+sudo umount /mnt/xiao
 
 echo "Flashing complete! Remove USB and wait for the $PART part to reboot."
