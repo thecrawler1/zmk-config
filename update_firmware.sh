@@ -5,6 +5,13 @@
 
 set -e  # Exit on error
 
+# Check if running as root
+if [ "$EUID" -ne 0 ]; then
+    echo "Error: This script must be run with sudo to access device files."
+    echo "Usage: sudo $0 left|right|dongle"
+    exit 1
+fi
+
 # Validate argument
 if [ $# -ne 1 ] || ! [[ "$1" =~ ^(left|right|dongle)$ ]]; then
     echo "Usage: $0 left|right|dongle"
@@ -61,7 +68,7 @@ sudo mount /dev/sda /mnt/xiao
 
 # Copy UF2
 echo "Flashing $UF2_FILE..."
-cp "$UF2_FILE" /mnt/xiao/
+sudo cp "$UF2_FILE" /mnt/xiao/
 
 # Sync to ensure write completes
 sync
