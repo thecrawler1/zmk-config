@@ -14,6 +14,12 @@ fi
 PART="$1"
 UF2_FILE="firmware/totem_${PART}-xiao_ble-zmk.uf2"
 
+# Move firmware.zip from Downloads if exists (always overwrite)
+if [ -f ~/Downloads/firmware.zip ]; then
+    echo "Moving firmware.zip from Downloads..."
+    mv ~/Downloads/firmware.zip ./
+fi
+
 # Unzip firmware.zip if exists (auto-confirm overwrite)
 if [ -f firmware.zip ]; then
     echo "Unzipping firmware.zip..."
