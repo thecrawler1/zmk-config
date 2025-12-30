@@ -42,29 +42,49 @@ fi
 
 # Prompt user to connect and enter bootloader
 echo "Connect the $PART part via USB and double-click reset to enter bootloader."
+echo "The device should appear as a USB drive (usually /dev/sda or /dev/sdb)."
 echo "Press Enter when ready."
 read
 
-# Wait for device (timeout after 30 attempts)
-echo "Waiting for Seeeduino XIAO (/dev/sda)..."
+# Wait for device (timeout after 60 attempts = 60 seconds)
+echo "Waiting for Seeeduino XIAO to appear as USB drive..."
 ATTEMPTS=0
-while ! sudo fdisk -l | grep -q "Disk /dev/sda"; do
-    if [ $ATTEMPTS -ge 30 ]; then
-        echo "Error: Device not detected within 30 seconds. Check USB connection and bootloader entry."
-        exit 1
-    fi
+DEVICE=""
+while [ $ATTEMPTS -lt 60 ]; do
+    # Check for common USB drive device names
+    for dev in /dev/sd[a-z] /dev/mmcblk[0-9]; do
+        if sudo fdisk -l "$dev" 2>/dev/null | grep -q "Disk $dev"; then
+            DEVICE="$dev"
+            break 2
+        fi
+    done
     sleep 1
     ATTEMPTS=$((ATTEMPTS + 1))
+    if [ $((ATTEMPTS % 10)) -eq 0 ]; then
+        echo "Still waiting... ($ATTEMPTS seconds)"
+    fi
 done
 
-echo "Device detected: /dev/sda"
+if [ -z "$DEVICE" ]; then
+    echo "Error: No USB drive detected within 60 seconds."
+    echo "Make sure to:"
+    echo "1. Connect the $PART part via USB"
+    echo "2. Double-click the reset button to enter bootloader mode"
+    echo "3. The device should appear as a USB drive in your file manager"
+    echo ""
+    echo "Available block devices:"
+    lsblk | grep -E "^(sd|mmc|nvme)" | head -10
+    exit 1
+fi
+
+echo "Device detected: $DEVICE"
 
 # Create mount point
 mkdir -p /mnt/xiao
 
 # Mount
-echo "Mounting..."
-sudo mount /dev/sda /mnt/xiao
+echo "Mounting $DEVICE..."
+sudo mount "$DEVICE" /mnt/xiao
 
 # Copy UF2
 echo "Flashing $UF2_FILE..."
