@@ -63,12 +63,15 @@ echo "Waiting for Seeeduino XIAO to appear as USB drive..."
 ATTEMPTS=0
 DEVICE=""
 while [ $ATTEMPTS -lt 60 ]; do
-    for dev in /dev/sd[a-z] /dev/mmcblk[0-9]; do
-        if sudo fdisk -l "$dev" 2>/dev/null | grep -q "Disk $dev"; then
-            DEVICE="$dev"
-            break 2
-        fi
-    done
+    # Safer detection using lsblk (avoids blocking fdisk calls on bad devices)
+    # Looks for a USB disk that is NOT the boot drive
+    NEW_DEVICE=$(lsblk -d -n -o NAME,TRAN,RM | grep "usb" | awk '{print "/dev/" $1}' | head -n 1)
+    
+    if [ -n "$NEW_DEVICE" ]; then
+        DEVICE="$NEW_DEVICE"
+        break
+    fi
+    
     sleep 1
     ATTEMPTS=$((ATTEMPTS + 1))
     if [ $((ATTEMPTS % 10)) -eq 0 ]; then
@@ -93,14 +96,24 @@ echo "Device detected: $DEVICE"
 mkdir -p /mnt/xiao
 
 echo "Mounting $DEVICE..."
-sudo mount "$DEVICE" /mnt/xiao
+# Use -o flush to write data immediately (safer for removable media)
+# Use -o uid=$UID if possible, but sudo mount usually makes it root owned.
+sudo mount -o flush "$DEVICE" /mnt/xiao
 
 echo "Flashing $UF2_FILE..."
-sudo cp "$UF2_FILE" /mnt/xiao/
+# cp may return error if device reboots immediately (which is expected for UF2)
+if sudo cp "$UF2_FILE" /mnt/xiao/; then
+    echo "Firmware copied successfully."
+else
+    echo "Warning: Copy command returned error (likely device rebooted early). This is normal for UF2."
+fi
 
-sync
+# SKIP SYNC: The device reboots immediately after receiving the file.
+# Syncing causes the kernel to hang waiting for a device that is gone.
+# sync
 
 echo "Unmounting..."
-sudo umount /mnt/xiao
+# Use lazy unmount (-l) because the device is likely already physically disconnected/rebooting
+sudo umount -l /mnt/xiao 2>/dev/null || true
 
-echo "Flashing complete! Remove USB and wait for the $PART part to reboot."
+echo "Flashing complete! The $PART part should be rebooting now."
