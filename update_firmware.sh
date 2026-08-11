@@ -14,8 +14,7 @@ if [ $# -ne 1 ] || ! [[ "$1" =~ ^(left|right|dongle)$ ]]; then
 fi
 
 PART="$1"
-UF2_NAME="totem_${PART}-xiao_ble-zmk.uf2"
-UF2_FILE="firmware/$UF2_NAME"
+UF2_FILE="firmware/totem_${PART}-xiao_ble-zmk.uf2"
 
 mkdir -p firmware
 
@@ -48,12 +47,16 @@ trap 'rm -rf "$DOWNLOAD_DIR"' EXIT
 echo "Downloading firmware from run ID: $RUN_ID..."
 "${GH_EXEC[@]}" run download "$RUN_ID" --repo "$REPO" -n firmware --dir "$DOWNLOAD_DIR"
 
-if [ ! -f "$DOWNLOAD_DIR/$UF2_NAME" ]; then
-    echo "Error: Downloaded artifact does not contain $UF2_NAME"
+shopt -s nullglob
+UF2_MATCHES=("$DOWNLOAD_DIR"/totem_"${PART}"-*-zmk.uf2)
+shopt -u nullglob
+
+if [ "${#UF2_MATCHES[@]}" -ne 1 ]; then
+    echo "Error: Expected exactly one UF2 for totem_${PART}, found ${#UF2_MATCHES[@]}"
     exit 1
 fi
 
-install -m 0644 "$DOWNLOAD_DIR/$UF2_NAME" "$UF2_FILE"
+install -m 0644 "${UF2_MATCHES[0]}" "$UF2_FILE"
 
 if [ ! -f "$UF2_FILE" ]; then
     echo "Error: UF2 file not found: $UF2_FILE"
