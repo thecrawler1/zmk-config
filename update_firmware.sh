@@ -14,50 +14,57 @@ if [ $# -ne 1 ] || ! [[ "$1" =~ ^(left|right|dongle)$ ]]; then
 fi
 
 PART="$1"
-UF2_FILE="firmware/totem_${PART}-xiao_ble-zmk.uf2"
+UF2_NAME="totem_${PART}-xiao_ble-zmk.uf2"
+UF2_FILE="firmware/$UF2_NAME"
 
-if [ -f ~/Downloads/firmware.zip ]; then
-    echo "Moving firmware.zip from Downloads..."
-    mv ~/Downloads/firmware.zip ./
+mkdir -p firmware
+
+if ! command -v gh &> /dev/null; then
+    echo "Error: gh is required to download the latest firmware build."
+    exit 1
 fi
 
-if [ -f firmware.zip ]; then
-    echo "Unzipping firmware.zip..."
-    unzip -o -q firmware.zip -d firmware/
+echo "Downloading latest successful firmware build from GitHub..."
+
+GH_EXEC=(gh)
+if [ -n "$SUDO_USER" ]; then
+    GH_EXEC=(sudo -u "$SUDO_USER" gh)
 fi
 
-if [ ! -f "$UF2_FILE" ]; then
-    if command -v gh &> /dev/null; then
-        echo "Attempting to download latest firmware from GitHub..."
-        
-        GH_EXEC="gh"
-        if [ -n "$SUDO_USER" ]; then
-            GH_EXEC="sudo -u $SUDO_USER gh"
-        fi
-        
-        echo "Fetching latest successful build..."
-        REPO="thecrawler1/zmk-config"
-        RUN_ID=$($GH_EXEC run list --repo "$REPO" --workflow "build.yml" --status success --limit 1 --json databaseId --jq '.[0].databaseId')
-        
-        if [ -n "$RUN_ID" ]; then
-            echo "Downloading firmware from run ID: $RUN_ID..."
-            $GH_EXEC run download "$RUN_ID" --repo "$REPO" -n firmware --dir firmware
-        else
-            echo "Warning: No successful build found on GitHub."
-        fi
-    fi
+REPO="thecrawler1/zmk-config"
+RUN_ID=$("${GH_EXEC[@]}" run list --repo "$REPO" --workflow "build.yml" --status success --limit 1 --json databaseId --jq '.[0].databaseId')
+
+if [ -z "$RUN_ID" ]; then
+    echo "Error: No successful firmware build found on GitHub."
+    exit 1
 fi
+
+DOWNLOAD_DIR=$(mktemp -d)
+if [ -n "$SUDO_USER" ]; then
+    chown "$SUDO_USER" "$DOWNLOAD_DIR"
+fi
+trap 'rm -rf "$DOWNLOAD_DIR"' EXIT
+
+echo "Downloading firmware from run ID: $RUN_ID..."
+"${GH_EXEC[@]}" run download "$RUN_ID" --repo "$REPO" -n firmware --dir "$DOWNLOAD_DIR"
+
+if [ ! -f "$DOWNLOAD_DIR/$UF2_NAME" ]; then
+    echo "Error: Downloaded artifact does not contain $UF2_NAME"
+    exit 1
+fi
+
+install -m 0644 "$DOWNLOAD_DIR/$UF2_NAME" "$UF2_FILE"
 
 if [ ! -f "$UF2_FILE" ]; then
     echo "Error: UF2 file not found: $UF2_FILE"
-    echo "Ensure firmware.zip is in the root and contains the correct UF2 files."
+    echo "The downloaded firmware could not be installed."
     exit 1
 fi
 
 echo "Connect the $PART part via USB and double-click reset to enter bootloader."
 echo "The device should appear as a USB drive (usually /dev/sda or /dev/sdb)."
 echo "Press Enter when ready."
-read
+read -r
 
 echo "Waiting for Seeeduino XIAO to appear as USB drive..."
 ATTEMPTS=0
