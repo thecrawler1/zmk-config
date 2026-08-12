@@ -19,161 +19,7 @@
 };
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        combo_accent_layer {
-            bindings = <&sl 6>;
-            key-positions = <14 15>;
-            layers = <0>;
-        };
-    };
-
     macros {
-        a_acute: a_acute {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp K_CONTEXT_MENU &kp SINGLE_QUOTE &kp A>;
-        };
-
-        e_acute: e_acute {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp K_CONTEXT_MENU &kp SINGLE_QUOTE &kp E>;
-        };
-
-        i_acute: i_acute {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp K_CONTEXT_MENU &kp SINGLE_QUOTE &kp I>;
-        };
-
-        o_acute: o_acute {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp K_CONTEXT_MENU &kp SINGLE_QUOTE &kp O>;
-        };
-
-        u_acute: u_acute {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp K_CONTEXT_MENU &kp SINGLE_QUOTE &kp U>;
-        };
-
-        sa_acute: shift_a_acute {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp K_CONTEXT_MENU &kp SINGLE_QUOTE &kp LS(A)>;
-        };
-
-        se_acute: shift_e_acute {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp K_CONTEXT_MENU &kp SINGLE_QUOTE &kp LS(E)>;
-        };
-
-        si_acute: shift_i_acute {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp K_CONTEXT_MENU &kp SINGLE_QUOTE &kp LS(I)>;
-        };
-
-        so_acute: shift_o_acute {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp K_CONTEXT_MENU &kp SINGLE_QUOTE &kp LS(O)>;
-        };
-
-        su_acute: shift_u_acute {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp K_CONTEXT_MENU &kp SINGLE_QUOTE &kp LS(U)>;
-        };
-
-        a_circumflex: a_circumflex {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp K_CONTEXT_MENU &kp CARET &kp A>;
-        };
-
-        e_circumflex: e_circumflex {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp K_CONTEXT_MENU &kp CARET &kp E>;
-        };
-
-        o_circumflex: o_circumflex {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp K_CONTEXT_MENU &kp CARET &kp O>;
-        };
-
-        sa_circumflex: shift_a_circumflex {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp K_CONTEXT_MENU &kp CARET &kp LS(A)>;
-        };
-
-        se_circumflex: shift_e_circumflex {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp K_CONTEXT_MENU &kp CARET &kp LS(E)>;
-        };
-
-        so_circumflex: shift_o_circumflex {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp K_CONTEXT_MENU &kp CARET &kp LS(O)>;
-        };
-
-        a_tilde: a_tilde {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp K_CONTEXT_MENU &kp TILDE &kp A>;
-        };
-
-        sa_tilde: shift_a_tilde {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp K_CONTEXT_MENU &kp TILDE &kp LS(A)>;
-        };
-
-        a_grave: a_crasis {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp K_CONTEXT_MENU &kp GRAVE &kp A>;
-        };
-
-        sa_grave: shift_a_grave {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp K_CONTEXT_MENU &kp GRAVE &kp LS(A)>;
-        };
-
-        c_cedilla: c_cedilla {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp K_CONTEXT_MENU &kp COMMA &kp C>;
-        };
-
-        sc_cedilla: shift_c_cedilla {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp K_CONTEXT_MENU &kp COMMA &kp LS(C)>;
-        };
-
-        o_tilde: o_tilde {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp K_CONTEXT_MENU &kp TILDE &kp O>;
-        };
-
-        so_tilde: so_tilde {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp K_CONTEXT_MENU &kp TILDE &kp LS(O)>;
-        };
-
         bitwarden: macro_bitwarden {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -291,8 +137,8 @@
             bindings = <
        &none                    &none                        &none                      &none               &none        &kp HOME       &kp PAGE_DOWN        &kp PAGE_UP            &kp END                 &none
        &hml LEFT_ALT AMPERSAND  &hml LEFT_SHIFT EXCLAMATION  &hml LEFT_CONTROL PERCENT  &hml LEFT_GUI HASH  &kp PIPE     &kp LEFT       &hmr RIGHT_GUI DOWN  &hmr RIGHT_CONTROL UP  &hmr RIGHT_SHIFT RIGHT  &kp LEFT_ALT
-&none  &none                    &none                        &none                      &none               &kp SPACE    &none          &none                &none                  &none                   &none         &none
-                                                             &none                      &none               &none        &kp BACKSPACE  &kp ENTER            &kp DELETE
+&none  &none                    &none                        &kp RA(COMMA)              &kp RA(N6)          &kp SPACE    &none          &kp RA(SINGLE_QUOTE)  &kp RA(LS(GRAVE))    &kp RA(GRAVE)           &none         &none
+                                                              &none                      &none               &none        &kp BACKSPACE  &kp ENTER            &kp DELETE
             >;
         };
 
@@ -314,23 +160,6 @@
             >;
         };
 
-        lowercase_accents {
-            bindings = <
-       &a_acute       &none     &e_acute       &none  &none    &none  &u_acute  &i_acute  &o_acute       &none
-       &a_circumflex  &a_grave  &e_circumflex  &none  &none    &none  &none     &none     &o_circumflex  &none
-&none  &a_tilde       &none     &c_cedilla     &none  &none    &none  &none     &none     &o_tilde       &none  &none
-                                &none          &none  &none    &none  &none     &sl 7
-            >;
-        };
-
-        uppercase_accents {
-            bindings = <
-       &sa_acute       &none      &se_acute       &none  &none    &none  &su_acute  &si_acute  &so_acute       &none
-       &sa_circumflex  &sa_grave  &se_circumflex  &none  &none    &none  &none      &none      &so_circumflex  &none
-&none  &sa_tilde       &none      &sc_cedilla     &none  &none    &none  &none      &none      &so_tilde       &none  &none
-                                  &none           &none  &none    &none  &none      &none
-            >;
-        };
     };
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
