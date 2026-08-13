@@ -73,10 +73,10 @@
 
         base {
             bindings = <
-       &kp Q            &kp W              &kp E                &kp R            &kp T    &kp Y  &kp U             &kp I                 &kp O               &kp P
-                 &hml LEFT_ALT A  &hml LEFT_SHIFT S  &hml LEFT_CONTROL D  &hml LEFT_GUI F  &kp G    &kp H  &hmr RIGHT_GUI J  &hmr RIGHT_CONTROL K  &hmr RIGHT_SHIFT L  &hmr LEFT_ALT SEMI
-&mo L_BROWSER    &kp Z            &kp X              &kp C                &kp V            &kp B    &kp N  &kp M             &kp COMMA             &kp DOT             &kp SLASH           &mo L_SYSTEM
-                                                    &mo L_NAVIGATION     &kp SPACE        &mo L_SYMBOLS    &mo L_NUMBERS  &kp ENTER         &sk LEFT_SHIFT
+               &kp Q            &kp W              &kp E                &kp R            &kp T            &kp Y          &kp U             &kp I                 &kp O               &kp P
+               &hml LEFT_ALT A  &hml LEFT_SHIFT S  &hml LEFT_CONTROL D  &hml LEFT_GUI F  &kp G            &kp H          &hmr RIGHT_GUI J  &hmr RIGHT_CONTROL K  &hmr RIGHT_SHIFT L  &hmr LEFT_ALT SEMI
+&mo L_BROWSER  &kp Z            &kp X              &kp C                &kp V            &kp B            &kp N          &kp M             &kp COMMA             &kp DOT             &kp SLASH           &mo L_SYSTEM
+                                                   &mo L_NAVIGATION     &kp SPACE        &mo L_SYMBOLS    &mo L_NUMBERS  &kp ENTER         &sk LEFT_SHIFT
             >;
         };
 
@@ -100,18 +100,18 @@
 
         navigation {
             bindings = <
-       &none                    &none                        &none                      &none               &none        &kp HOME       &kp PAGE_DOWN        &kp PAGE_UP            &kp END                 &none
-       &hml LEFT_ALT AMPERSAND  &hml LEFT_SHIFT EXCLAMATION  &hml LEFT_CONTROL PERCENT  &hml LEFT_GUI HASH  &kp PIPE     &kp LEFT       &hmr RIGHT_GUI DOWN  &hmr RIGHT_CONTROL UP  &hmr RIGHT_SHIFT RIGHT  &kp LEFT_ALT
-&none  &none                    &none                        &kp RA(COMMA)              &kp RA(GRAVE)       &kp SPACE    &none          &kp RA(SINGLE_QUOTE)  &kp RA(LS(GRAVE))    &kp RA(N6)              &none         &none
-                                                              &none                      &none               &none        &kp BACKSPACE  &kp ENTER            &kp DELETE
+       &none                    &none                        &none                      &none               &none        &kp HOME       &kp PAGE_DOWN         &kp PAGE_UP            &kp END                 &none
+       &hml LEFT_ALT AMPERSAND  &hml LEFT_SHIFT EXCLAMATION  &hml LEFT_CONTROL PERCENT  &hml LEFT_GUI HASH  &kp PIPE     &kp LEFT       &hmr RIGHT_GUI DOWN   &hmr RIGHT_CONTROL UP  &hmr RIGHT_SHIFT RIGHT  &kp LEFT_ALT
+&none  &none                    &none                        &kp RA(COMMA)              &kp RA(GRAVE)       &kp SPACE    &none          &kp RA(SINGLE_QUOTE)  &kp RA(LS(GRAVE))      &kp RA(N6)              &none         &none
+                                                             &none                      &none               &none        &kp BACKSPACE  &kp ENTER             &kp DELETE
             >;
         };
 
         browser {
             bindings = <
-       &none  &none  &none  &none  &none    &none              &kp LC(PLUS)     &kp LC(MINUS)   &none      &none
-       &none  &none  &none  &none  &none    &kp LC(T)          &kp LC(LS(TAB))  &kp LC(TAB)     &kp LC(F4) &kp LC(B)
-&none  &none  &none  &none  &none  &none    &last_tabs         &kp LC(D)        &kp LC(U)       &addrbar   &none      &none
+       &none  &none  &none  &none  &none    &none              &kp LC(EQUAL)    &kp LC(MINUS)   &none       &none
+       &none  &none  &none  &none  &none    &kp LC(T)          &kp LC(LS(TAB))  &kp LC(TAB)     &kp LC(F4)  &kp LC(B)
+&none  &none  &none  &none  &none  &none    &last_tabs         &kp LC(D)        &kp LC(U)       &addrbar    &none      &none
                      &none  &none  &none    &kp LC(BACKSPACE)  &none            &kp LC(DELETE)
             >;
         };
@@ -124,6 +124,5 @@
                                       &none               &none            &none    &none  &none  &none
             >;
         };
-
     };
 };
