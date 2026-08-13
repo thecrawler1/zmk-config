@@ -66,10 +66,7 @@ fi
 
 echo "Connect the $PART part via USB and double-click reset to enter bootloader."
 echo "The device should appear as a USB drive (usually /dev/sda or /dev/sdb)."
-echo "Press Enter when ready."
-read -r
-
-echo "Waiting for Seeeduino XIAO to appear as USB drive..."
+echo "Waiting for Seeeduino XIAO to appear as USB drive automatically..."
 ATTEMPTS=0
 DEVICE=""
 while [ $ATTEMPTS -lt 60 ]; do
