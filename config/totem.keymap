@@ -13,6 +13,13 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
+#define L_BASE 0
+#define L_NUMBERS 1
+#define L_SYMBOLS 2
+#define L_NAVIGATION 3
+#define L_BROWSER 4
+#define L_SYSTEM 5
+
 &sk {
     release-after-ms = <500>;
     quick-release;
@@ -20,36 +27,6 @@
 
 / {
     macros {
-        bitwarden: macro_bitwarden {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(LS(L))>;
-        };
-
-        dark_reader: dark_reader {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(LA(A))>;
-        };
-
-        translate: translate_text {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(LC(N1))>;
-        };
-
-        listen: listen_selection {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(LC(N2))>;
-        };
-
-        devtools: devtools {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp F12>;
-        };
-
         addrbar: addrbar {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -60,18 +37,6 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LC(LS(T))>;
-        };
-
-        tab_start: tab_start {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(LS(HOME))>;
-        };
-
-        reader_mode: reader_mode {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(LA(R))>;
         };
     };
 
@@ -109,9 +74,9 @@
         base {
             bindings = <
        &kp Q            &kp W              &kp E                &kp R            &kp T    &kp Y  &kp U             &kp I                 &kp O               &kp P
-       &hml LEFT_ALT A  &hml LEFT_SHIFT S  &hml LEFT_CONTROL D  &hml LEFT_GUI F  &kp G    &kp H  &hmr RIGHT_GUI J  &hmr RIGHT_CONTROL K  &hmr RIGHT_SHIFT L  &hmr LEFT_ALT SEMI
-&mo 4  &kp Z            &kp X              &kp C                &kp V            &kp B    &kp N  &kp M             &kp COMMA             &kp DOT             &kp SLASH           &mo 5
-                                           &mo 3                &kp SPACE        &mo 2    &mo 1  &kp ENTER         &sk LEFT_SHIFT
+                 &hml LEFT_ALT A  &hml LEFT_SHIFT S  &hml LEFT_CONTROL D  &hml LEFT_GUI F  &kp G    &kp H  &hmr RIGHT_GUI J  &hmr RIGHT_CONTROL K  &hmr RIGHT_SHIFT L  &hmr LEFT_ALT SEMI
+&mo L_BROWSER    &kp Z            &kp X              &kp C                &kp V            &kp B    &kp N  &kp M             &kp COMMA             &kp DOT             &kp SLASH           &mo L_SYSTEM
+                                                    &mo L_NAVIGATION     &kp SPACE        &mo L_SYMBOLS    &mo L_NUMBERS  &kp ENTER         &sk LEFT_SHIFT
             >;
         };
 
@@ -133,7 +98,7 @@
             >;
         };
 
-        new {
+        navigation {
             bindings = <
        &none                    &none                        &none                      &none               &none        &kp HOME       &kp PAGE_DOWN        &kp PAGE_UP            &kp END                 &none
        &hml LEFT_ALT AMPERSAND  &hml LEFT_SHIFT EXCLAMATION  &hml LEFT_CONTROL PERCENT  &hml LEFT_GUI HASH  &kp PIPE     &kp LEFT       &hmr RIGHT_GUI DOWN  &hmr RIGHT_CONTROL UP  &hmr RIGHT_SHIFT RIGHT  &kp LEFT_ALT
@@ -142,7 +107,7 @@
             >;
         };
 
-        navigation {
+        browser {
             bindings = <
        &none  &none  &none  &none  &none    &none              &kp LC(PLUS)     &kp LC(MINUS)   &none      &none
        &none  &none  &none  &none  &none    &kp LC(T)          &kp LC(LS(TAB))  &kp LC(TAB)     &kp LC(F4) &kp LC(B)
@@ -151,7 +116,7 @@
             >;
         };
 
-        utils {
+        system {
             bindings = <
        &none         &kp K_MUTE       &kp C_VOLUME_DOWN   &kp C_VOLUME_UP  &none    &none  &none  &none  &none  &none
        &kp CAPSLOCK  &kp PRINTSCREEN  &none               &none            &none    &none  &none  &none  &none  &none
@@ -161,6 +126,4 @@
         };
 
     };
-
-    conditional_layers { compatible = "zmk,conditional-layers"; };
 };
