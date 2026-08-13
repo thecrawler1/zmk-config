@@ -137,7 +137,7 @@
             bindings = <
        &none                    &none                        &none                      &none               &none        &kp HOME       &kp PAGE_DOWN        &kp PAGE_UP            &kp END                 &none
        &hml LEFT_ALT AMPERSAND  &hml LEFT_SHIFT EXCLAMATION  &hml LEFT_CONTROL PERCENT  &hml LEFT_GUI HASH  &kp PIPE     &kp LEFT       &hmr RIGHT_GUI DOWN  &hmr RIGHT_CONTROL UP  &hmr RIGHT_SHIFT RIGHT  &kp LEFT_ALT
-&none  &none                    &none                        &kp RA(COMMA)              &kp RA(N6)          &kp SPACE    &none          &kp RA(SINGLE_QUOTE)  &kp RA(LS(GRAVE))    &kp RA(GRAVE)           &none         &none
+&none  &none                    &none                        &kp RA(COMMA)              &kp RA(GRAVE)       &kp SPACE    &none          &kp RA(SINGLE_QUOTE)  &kp RA(LS(GRAVE))    &kp RA(N6)              &none         &none
                                                               &none                      &none               &none        &kp BACKSPACE  &kp ENTER            &kp DELETE
             >;
         };
